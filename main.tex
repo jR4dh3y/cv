@@ -108,10 +108,6 @@
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
 
 \begin{center}
   {\Huge \scshape Radhey Kalra} \\ \vspace{1pt}
@@ -129,7 +125,7 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Bachelor of Technology in CSE }{Aug. 2023 -- May 2027}
+      {Bachelor of Technology in CSE}{Aug. 2023 -- May 2027}
       {Model Institute of Engineering and Technology}{Jammu and Kashmir, India}
       {}
   \resumeSubHeadingListEnd
@@ -139,12 +135,12 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
     \textbf{Languages}{: Python, C/C++, TypeScript, Go, Rust, SQL, Bash, QML, LaTeX} \\
-    \textbf{Frameworks \& Platforms}{: Svelte-Kit, React, Next.js, Astro, Tailwind CSS, React Native, Expo, Bun, Node.js} \\ 
+   \textbf{Frameworks \& Platforms}{: SvelteKit, React, Next.js, Astro, Tailwind CSS, React Native, Expo, Bun, Node.js} \\ 
     \textbf{Developer Tools}{: Git, Docker, CMake, CI/CD, Cloudflare, Vercel, Kubernetes, Terraform} \\
     \textbf{Databases \& Cloud}{: Convex, PostgreSQL, MySQL, AWS, \href{https://www.skills.google/public_profiles/bfe09e57-861c-451d-a3b9-289d875f0030}{\textcolor{blue}{GCP}}} \\
     \textbf{Libraries}{: PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, Matplotlib, Seaborn, Manim} \\
     \textbf{Domains}{: Deep Learning, Audio Processing, Linux Servers, Full-Stack Development, Networking} \\
-    \textbf{Opearting Systems}{: Linux and Windows}
+   \textbf{Operating Systems}{: Linux and Windows}
     }}
  \end{itemize}
 
@@ -177,7 +173,7 @@
 \section{Projects}
     \resumeSubHeadingListStart
         \resumeProjectHeading
-            {\textbf{Unet Audio Filter} $|$ \emph{Audio Enhancement by removing background noise} $|$ \href{https://github.com/jR4dh3y/unet-audiofilter}{\textcolor{blue}{GitHub}}}{}
+            {\textbf{U-Net Audio Filter} $|$ \emph{Audio Enhancement by removing background noise} $|$ \href{https://github.com/jR4dh3y/unet-audiofilter}{\textcolor{blue}{GitHub}}}{}
         \resumeItemListStart
       \resumeItem{Current research project on audio enhancement using a \textbf{custom U-Net-inspired architecture} and end-to-end training pipeline for denoising and source separation.}
       \resumeItem{Developing the workflow with \textbf{Python, PyTorch, and audio DSP preprocessing}, including custom data handling, spectrogram-based modeling, and evaluation tooling.}
@@ -192,24 +188,10 @@
     \resumeItemListEnd
 
     \resumeProjectHeading
-      {\textbf{ViDown} $|$ \emph{Self-hosted yt-dlp web interface for downloading media} $|$ \href{https://dl.jr4.in}{\textcolor{blue}{Live}} $|$ \href{https://github.com/jR4dh3y/vidown}{\textcolor{blue}{GitHub}}}{}
-    \resumeItemListStart
-      \resumeItem{Built a self-hosted downloader with \textbf{SvelteKit}, \textbf{FastAPI}, \textbf{yt-dlp}, and \textbf{Docker}, supporting 1000+ sites, format selection, metadata previews, and real-time download progress.}
-      \resumeItem{Deployed it as part of my homelab workflow to fetch media directly from a browser-based interface while keeping downloads and processing on my own server.}
-    \resumeItemListEnd
-
-    \resumeProjectHeading
-      {\textbf{AnyConverter} $|$ \emph{Self-hosted file conversion and PDF utility toolkit} $|$ \href{https://anyconv.jr4.in/}{\textcolor{blue}{Live}} $|$ \href{https://github.com/jR4dh3y/anyconverter}{\textcolor{blue}{GitHub}}}{}
-    \resumeItemListStart
-      \resumeItem{Built a self-hosted conversion tool for everyday workflows, supporting \textbf{PDF, DOC/DOCX, PPT/PPTX, XLS/XLSX, JPEG, PNG, SVG} and other common formats from a browser-based interface.}
-      \resumeItem{Designed it around privacy-first usage so files stay on my own server instead of being uploaded to third-party services.}
-    \resumeItemListEnd
-
-    \resumeProjectHeading
       {\textbf{Homelab Infrastructure} $|$ \emph{Self-hosted server for storage, remote access, and service deployment} $|$ \href{https://github.com/jR4dh3y/homelabs}{\textcolor{blue}{GitHub}}}{}
     \resumeItemListStart
       \resumeItem{Built a personal homelab on repurposed hardware running \textbf{Ubuntu Server}, using \textbf{Docker Compose} for service orchestration, \textbf{Cloudflare Tunnel} for secure remote access, and \textbf{Traefik} for reverse proxying.}
-      \resumeItem{This is where I host tools such as \textbf{AnyConverter}, \textbf{Homelab File Manager}, and \textbf{ViDown}, and use them directly in my day-to-day workflow.}
+      \resumeItem{This is where I host tools such as \textbf{ViDown} (\href{https://dl.jr4.in}{\textcolor{blue}{Live}} / \href{https://github.com/jR4dh3y/vidown}{\textcolor{blue}{GitHub}}) and \textbf{AnyConverter} (\href{https://anyconv.jr4.in/}{\textcolor{blue}{Live}} / \href{https://github.com/jR4dh3y/anyconverter}{\textcolor{blue}{GitHub}}), which I use directly in my day-to-day workflow.}
       \resumeItem{Maintained a custom \textbf{CI/CD workflow} that tracks GitHub changes, pulls updates onto the server, syncs with self-hosted \textbf{Gitea}, and automatically redeploys services.}
     \resumeItemListEnd
 
@@ -249,28 +231,15 @@
     \resumeProjectHeading
       {\textbf{dots-niri} $|$ \emph{Automated Arch Linux dotfiles and installer for the Niri compositor} $|$ \href{https://github.com/jR4dh3y/dots-niri}{\textcolor{blue}{GitHub}}}{}
     \resumeItemListStart
-      \resumeItem{Built a personal \textbf{Niri} rice and automation setup using \textbf{QML, Shell, JavaScript, and Python}, with an installer that provisions packages, symlinks configs, copies assets, and enables desktop services on Arch Linux.}
-      \resumeItem{Currently my \textbf{most popular GitHub project}, with \textbf{25 stars}, reflecting community interest in Linux customization and reproducible desktop setup workflows.}
-    \resumeItemListEnd
-
-    \resumeProjectHeading
-      {\textbf{WallpyGui} $|$ \emph{Wallpaper manager for Wayland compositors} $|$ \href{https://github.com/jR4dh3y/wallpygui}{\textcolor{blue}{GitHub}}}{}
-    \resumeItemListStart
-      \resumeItem{Built a wallpaper manager for Wayland-based Linux desktops using \textbf{Python} and \textbf{GTK4}, simplifying wallpaper selection and management through a clean graphical interface.}
-      \resumeItem{Designed the tool around Linux customization workflows, with emphasis on desktop integration and usability for tiling compositor setups.}
-    \resumeItemListEnd
-
-    \resumeProjectHeading
-      {\textbf{iwd-applet} $|$ \emph{Tray applet for menu-driven wireless management with iwd} $|$ \href{https://github.com/jR4dh3y/iwd-applet}{\textcolor{blue}{GitHub}}}{}
-    \resumeItemListStart
-      \resumeItem{Developed a lightweight Linux tray applet in \textbf{Python} with \textbf{GTK/AppIndicator} to manage Wi-Fi through \textbf{iwd}, including network discovery, PSK/open network connection, status details, and auto-refreshing link indicators.}
+      \resumeItem{Built a personal \textbf{Niri} rice and automation setup with an installer that provisions packages, symlinks configs, copies assets, and enables desktop services on Arch Linux.}
+      \resumeItem{Extended the same Linux desktop workflow with companion tools including \textbf{WallpyGui} (\href{https://github.com/jR4dh3y/wallpygui}{\textcolor{blue}{GitHub}}), a wallpaper manager for Wayland compositors, and \textbf{iwd-applet} (\href{https://github.com/jR4dh3y/iwd-applet}{\textcolor{blue}{GitHub}}), a tray applet for menu-driven wireless management through \textbf{iwd}.}
     \resumeItemListEnd
 
     \resumeProjectHeading
       {\textbf{TL;DR AI} $|$ \emph{Desktop app to summarize WhatsApp chats using LLMs} $|$ \href{https://github.com/jR4dh3y/tldr-desktop}{\textcolor{blue}{GitHub}}}{}
     \resumeItemListStart
       \resumeItem{Built an \textbf{Electron} desktop application with \textbf{React} and \textbf{TypeScript} to summarize WhatsApp group chats using OpenRouter-compatible AI models.}
-      \resumeItem{Users have to login using QR and enter there openrouter api key.}
+      \resumeItem{Users log in via QR and enter their OpenRouter API key.}
       \resumeItem{Designed the workflow so users can process their own chat data with flexible model choices, making the app practical for personal productivity use cases.}
     \resumeItemListEnd
 
