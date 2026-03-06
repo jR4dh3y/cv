@@ -1,0 +1,319 @@
+%-------------------------
+% Resume in Latex
+% Author : Radhey Kalra
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{5pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[5]{%
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}
+  % Optional 3rd line
+  \if\relax\detokenize{#5}\relax
+  \else
+    {\small #5}
+  \fi
+  \vspace{-6pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+  {\Huge \scshape Radhey Kalra} \\ \vspace{1pt}
+    \small +91 6005104654 $|$ 
+    \href{mailto:radheykalra901@gmail.com}{\underline{radheykalra901@gmail.com}} $|$
+    \href{https://jr4.in}{\underline{Portfolio}} $|$
+    \href{https://linkedin.com/in/radheykalra}{\underline{LinkedIn}} $|$
+    \href{https://github.com/jr4dh3y}{\underline{GitHub}} \\[4pt]
+    \small Building ML/audio systems and self-hosted infrastructure, with current research focused on \textbf{audio denoising}. \\
+    \small Leading cloud initiatives at \textbf{GDGoC} and \textbf{AWS Club}, and interested in scalable infrastructure and collaborative projects.
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bachelor of Technology in CSE }{Aug. 2023 -- May 2027}
+      {Model Institute of Engineering and Technology}{Jammu and Kashmir, India}
+      {}
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Languages}{: Python, C/C++, TypeScript, Go, Rust, SQL, Bash, QML, LaTeX} \\
+    \textbf{Frameworks \& Platforms}{: Svelte-Kit, React, Next.js, Astro, Tailwind CSS, React Native, Expo, Bun, Node.js} \\ 
+    \textbf{Developer Tools}{: Git, Docker, CMake, CI/CD, Cloudflare, Vercel, Kubernetes, Terraform} \\
+    \textbf{Databases \& Cloud}{: Convex, PostgreSQL, MySQL, AWS, \href{https://www.skills.google/public_profiles/bfe09e57-861c-451d-a3b9-289d875f0030}{\textcolor{blue}{GCP}}} \\
+    \textbf{Libraries}{: PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, Matplotlib, Seaborn, Manim} \\
+    \textbf{Domains}{: Deep Learning, Audio Processing, Linux Servers, Full-Stack Development, Networking} \\
+    \textbf{Opearting Systems}{: Linux and Windows}
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart      
+  \resumeSubheading
+      {Cloud Lead}{Aug. 2025 -- Present}
+      {GDGoC (Google Developer Groups on Campus), MIET Jammu}{Jammu and Kashmir, India}
+      {}
+      \resumeItemListStart
+        \resumeItem{Led cloud learning initiatives by organizing hands-on workshops and guided sessions around \textbf{Google Cloud} services and developer tooling.}
+        \resumeItem{Built and maintained a \textbf{tutorial platform} containing lab walkthroughs, notes, and video resources to help students complete Study Jam skill badges efficiently; live at \href{https://gcp-tutorial.vercel.app/}{\textcolor{blue}{Website}} with source on \href{https://github.com/gdgoc-miet/gcp-tutorial-ui}{\textcolor{blue}{GitHub}}.}
+        \resumeItem{Used \textbf{TypeScript, Docker, Terraform, and Linux-based workflows} to streamline deployment and improve the learning experience for campus participants.}
+      \resumeItemListEnd
+
+  \resumeSubheading
+      {Cloud and DevOps Lead}{Jan. 2026 -- Present}
+      {AWS Cloud Club MIET Jammu}{Jammu and Kashmir, India}
+      {}
+      \resumeItemListStart
+        \resumeItem{Leading cloud and DevOps initiatives as part of the core team by mentoring students through workshops, collaborative projects, and technical sessions.}
+        \resumeItem{Promoted adoption of \textbf{AWS}, containerization, and infrastructure best practices across club activities with focus on deployment, automation, and scalability.}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\vspace{-14pt}
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{Unet Audio Filter} $|$ \emph{Audio Enhancement by removing background noise} $|$ \href{https://github.com/jR4dh3y/unet-audiofilter}{\textcolor{blue}{GitHub}}}{}
+        \resumeItemListStart
+      \resumeItem{Current research project on audio enhancement using a \textbf{custom U-Net-inspired architecture} and end-to-end training pipeline for denoising and source separation.}
+      \resumeItem{Developing the workflow with \textbf{Python, PyTorch, and audio DSP preprocessing}, including custom data handling, spectrogram-based modeling, and evaluation tooling.}
+      \resumeItem{In development, but already outperforming existing \textbf{open-source baselines on select metrics}, showing promising near-SOTA results in early experiments.}
+        \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Homelab File Manager} $|$ \emph{Self-hosted file management system for Linux servers} $|$ \href{https://files.jr4.in/test}{\textcolor{blue}{Live}} $|$ \href{https://github.com/jR4dh3y/homelab-filemgr}{\textcolor{blue}{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Built a \textbf{fast, lightweight} file manager for Linux servers using \textbf{Svelte} and \textbf{Go}, supporting multi-mount browsing, chunked transfers, and real-time file updates.}
+      \resumeItem{Added support for \textbf{most media content} with live preview/streaming, plus \textbf{Monaco Editor} integration for viewing and editing text-based files directly in the browser.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{ViDown} $|$ \emph{Self-hosted yt-dlp web interface for downloading media} $|$ \href{https://dl.jr4.in}{\textcolor{blue}{Live}} $|$ \href{https://github.com/jR4dh3y/vidown}{\textcolor{blue}{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Built a self-hosted downloader with \textbf{SvelteKit}, \textbf{FastAPI}, \textbf{yt-dlp}, and \textbf{Docker}, supporting 1000+ sites, format selection, metadata previews, and real-time download progress.}
+      \resumeItem{Deployed it as part of my homelab workflow to fetch media directly from a browser-based interface while keeping downloads and processing on my own server.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{AnyConverter} $|$ \emph{Self-hosted file conversion and PDF utility toolkit} $|$ \href{https://anyconv.jr4.in/}{\textcolor{blue}{Live}} $|$ \href{https://github.com/jR4dh3y/anyconverter}{\textcolor{blue}{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Built a self-hosted conversion tool for everyday workflows, supporting \textbf{PDF, DOC/DOCX, PPT/PPTX, XLS/XLSX, JPEG, PNG, SVG} and other common formats from a browser-based interface.}
+      \resumeItem{Designed it around privacy-first usage so files stay on my own server instead of being uploaded to third-party services.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Homelab Infrastructure} $|$ \emph{Self-hosted server for storage, remote access, and service deployment} $|$ \href{https://github.com/jR4dh3y/homelabs}{\textcolor{blue}{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Built a personal homelab on repurposed hardware running \textbf{Ubuntu Server}, using \textbf{Docker Compose} for service orchestration, \textbf{Cloudflare Tunnel} for secure remote access, and \textbf{Traefik} for reverse proxying.}
+      \resumeItem{This is where I host tools such as \textbf{AnyConverter}, \textbf{Homelab File Manager}, and \textbf{ViDown}, and use them directly in my day-to-day workflow.}
+      \resumeItem{Maintained a custom \textbf{CI/CD workflow} that tracks GitHub changes, pulls updates onto the server, syncs with self-hosted \textbf{Gitea}, and automatically redeploys services.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{HowTo} $|$ \emph{Minimal technical tutorials and guides site} $|$ \href{https://howto.jr4.in/}{\textcolor{blue}{Live}} $|$ \href{https://github.com/jR4dh3y/howTo}{\textcolor{blue}{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Built a technical tutorials website using \textbf{Astro}, \textbf{Tailwind CSS}, and \textbf{Bun}, with structured content collections, syntax highlighting, and a clean reading experience.}
+      \resumeItem{Actively publish technical guides across both \textbf{hardware} and \textbf{software} topics, with practical documentation.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Community Leaderboard} $|$ \emph{Dashboard for event tracking, rankings, and community management} $|$ \href{https://dash.radhey.dev/}{\textcolor{blue}{Live}} $|$ \href{https://github.com/jR4dh3y/unidash}{\textcolor{blue}{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Developed a community management dashboard with \textbf{Next.js}, \textbf{Convex}, and \textbf{Clerk} for user profiles, event tracking, points allocation, and leaderboard views.}
+      \resumeItem{Designed admin-focused workflows for managing events, monitoring participation, and maintaining rankings through clean, responsive interfaces.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Hotel Booking} $|$ \emph{Full-stack booking platform with auth and admin workflows} $|$ \href{https://github.com/jR4dh3y/hotel-booking}{\textcolor{blue}{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Built a hotel booking application using \textbf{Svelte, Node.js, Express, and MySQL}, featuring authentication, booking management, and admin-facing controls for handling reservations.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Terminal Doom} $|$ \emph{Doom-inspired terminal game built with ncurses} $|$ \href{https://github.com/jR4dh3y/doom-in-terminal}{\textcolor{blue}{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Created a Doom-styled game in the terminal using \textbf{C++}, \textbf{ncurses}, and \textbf{CMake}, translating arcade-style gameplay and rendering into a text-based interface.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Pico32} $|$ \emph{Serial-only TUI for ESP32 Marauder on generic ESP32 hardware} $|$ \href{https://pico32.radhey.dev}{\textcolor{blue}{Live}} $|$ \href{https://github.com/jR4dh3y/Pico32}{\textcolor{blue}{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Developed a lightweight terminal interface for ESP32 Marauder using \textbf{C++} and PlatformIO, enabling Wi-Fi and Bluetooth testing workflows over serial on low-cost ESP32 boards.}
+      \resumeItem{Focused on portability and usability by adapting a hardware security toolchain into a compact, keyboard-driven TUI experience.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{dots-niri} $|$ \emph{Automated Arch Linux dotfiles and installer for the Niri compositor} $|$ \href{https://github.com/jR4dh3y/dots-niri}{\textcolor{blue}{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Built a personal \textbf{Niri} rice and automation setup using \textbf{QML, Shell, JavaScript, and Python}, with an installer that provisions packages, symlinks configs, copies assets, and enables desktop services on Arch Linux.}
+      \resumeItem{Currently my \textbf{most popular GitHub project}, with \textbf{25 stars}, reflecting community interest in Linux customization and reproducible desktop setup workflows.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{WallpyGui} $|$ \emph{Wallpaper manager for Wayland compositors} $|$ \href{https://github.com/jR4dh3y/wallpygui}{\textcolor{blue}{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Built a wallpaper manager for Wayland-based Linux desktops using \textbf{Python} and \textbf{GTK4}, simplifying wallpaper selection and management through a clean graphical interface.}
+      \resumeItem{Designed the tool around Linux customization workflows, with emphasis on desktop integration and usability for tiling compositor setups.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{iwd-applet} $|$ \emph{Tray applet for menu-driven wireless management with iwd} $|$ \href{https://github.com/jR4dh3y/iwd-applet}{\textcolor{blue}{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Developed a lightweight Linux tray applet in \textbf{Python} with \textbf{GTK/AppIndicator} to manage Wi-Fi through \textbf{iwd}, including network discovery, PSK/open network connection, status details, and auto-refreshing link indicators.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{TL;DR AI} $|$ \emph{Desktop app to summarize WhatsApp chats using LLMs} $|$ \href{https://github.com/jR4dh3y/tldr-desktop}{\textcolor{blue}{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Built an \textbf{Electron} desktop application with \textbf{React} and \textbf{TypeScript} to summarize WhatsApp group chats using OpenRouter-compatible AI models.}
+      \resumeItem{Users have to login using QR and enter there openrouter api key.}
+      \resumeItem{Designed the workflow so users can process their own chat data with flexible model choices, making the app practical for personal productivity use cases.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Tenant Manager} $|$ \emph{Mobile app for tracking tenants and electricity usage} $|$ \href{https://github.com/jR4dh3y/tennet-manager}{\textcolor{blue}{GitHub}}}{}
+    \resumeItemListStart
+      \resumeItem{Built a mobile management app with \textbf{React Native}, \textbf{Expo}, and \textbf{TypeScript} to maintain tenant records and log electricity usage in a simpler field-friendly workflow.}
+    \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+%----------- Certifications \& Programs-----------
+\section{Certifications \& Programs}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \footnotesize{\item{
+     \textbf{Google Cybersecurity} $|$ \href{https://drive.google.com/file/d/1SIxLO0PLcOsLC0SQkZri6dQD1kyKAooL/view?usp=sharing}{\textcolor{blue}{Certificate}} \\[2pt]
+     \textbf{Cisco Cybersecurity Operations Fundamentals} $|$ \href{https://drive.google.com/file/d/1GzR6t8wylBR3NqwdkuLobi6jAqEr0CcG/view?usp=sharing}{\textcolor{blue}{Certificate}} \\[2pt]
+     \textbf{IBM SkillsBuild: AI Agent Architect} $|$ \href{https://drive.google.com/file/d/19Pmeutg62bbuCQ1M5NDx4nc2zKQgZ2ig/view}{\textcolor{blue}{Certificates}} \\[2pt]
+     \textbf{IDE Bootcamp (AICTE / MoE)} $|$ \href{https://drive.google.com/file/d/1zPWEANVHF5TArUIdF3m7mu7goTPxbUPX/view?usp=sharing}{\textcolor{blue}{Certificate}}
+    }}
+ \end{itemize}
+
+%-----------EXTRA-CURRICULARS-----------
+\section{Extra-Curriculars, Leadership, \& Initiatives}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Team Leader}{}
+      {Internal Hackathon \& Smart India Hackathon (SIH 2024 \& 2025)}{MIET, Jammu}
+      {}
+      \resumeItemListStart
+        \resumeItem{Led multidisciplinary teams for the college's internal hackathon and Smart India Hackathon selection rounds in both \textbf{2024} and \textbf{2025}.}
+        \resumeItem{Reached the \textbf{top 9 teams in the college} in both years by driving collaborative problem-solving, rapid prototyping, and solution design for real-world challenges.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Team Leader}{Feb. 2025}
+      {Innovation, Design, and Entrepreneurship (IDE) Bootcamp}{IIT Jammu}
+      {}
+      \resumeItemListStart
+        \resumeItem{Participated in a 5-day immersive bootcamp organized by IIT Jammu in collaboration with the Wadhwani Foundation, AICTE, and MoE's Innovation Cell.}
+        \resumeItem{Led a team in developing a ``Sports Match Finder'' app, applying principles of design thinking and the Lean Canvas model to address market needs.}
+        \resumeItem{Engaged in hands-on activities and real-world case studies, gaining insights into business modeling, product design, and entrepreneurial strategies.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\end{document}
