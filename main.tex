@@ -146,7 +146,7 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-    \textbf{Languages}{: Python, C/C++, TypeScript, Go, Rust, SQL, Lua, Bash, PowerShell, QML, LaTeX} \\
+    \textbf{Languages}{: Python, C/C++, TypeScript, Go, Rust, SQL, Lua, Bash, PowerShell, QML, Vala} \\
    \textbf{Frameworks \& Platforms}{: SvelteKit, React, Next.js, Astro, Tailwind CSS, React Native, Expo, Bun, Node} \\ 
     \textbf{Developer Tools}{: Git, Docker, CMake, CI/CD, Cloudflare, Vercel, Kubernetes, Terraform} \\
     \textbf{Databases \& Cloud}{: Convex, PostgreSQL, MySQL, AWS, \href{https://www.skills.google/public_profiles/bfe09e57-861c-451d-a3b9-289d875f0030}{\textcolor{blue}{GCP}}} \\
@@ -192,6 +192,17 @@
       \resumeItem{In development, but already achieving \textbf{around 15\% improvement over open-source baselines on select metrics}, showing promising near-SOTA results in early experiments.}
         \resumeItemListEnd
 
+        
+    \resumeProjectHeading
+      {HPOmen Linux (Victus Control)}
+      {\emph{Reverse-engineering HP OMEN control utility behavior on Linux} $|$ \href{https://github.com/jR4dh3y/HPOmen-linux}{\textcolor{blue}{GitHub}}}
+      {Mar. 2026 -- Present}
+    \resumeItemListStart
+      \resumeItem{Building a Linux-first control surface in \textbf{Vala} with a GTK4 monitor app, tray companion, D-Bus helper, and probe CLI to replicate practical OMEN/Victus control workflows.}
+      \resumeItem{Reverse-engineered \textbf{HP WMI} and \textbf{sysfs} behavior on Victus hardware, validating hardware-profile switching and fan mode controls (\textbf{auto/max}) exposed by \texttt{hp\_wmi}.}
+      \resumeItem{Currently expanding the Linux \texttt{hp\_wmi} path for more granular hardware control by reverse-engineering Windows OMEN behavior and vendor endpoints, while keeping capability-gated safety fallbacks for unsupported operations.}
+    \resumeItemListEnd
+    \pagebreak
     \resumeProjectHeading
       {BoxBox}
       {\emph{Self-hosted file management system for Linux servers} $|$ \href{https://boxbox.radhey.dev/}{\textcolor{blue}{Website}} $|$ \href{https://github.com/jR4dh3y/BoxBox}{\textcolor{blue}{GitHub}}}
@@ -200,31 +211,32 @@
       \resumeItem{Built a \textbf{fast, lightweight} file manager for Linux servers using \textbf{Svelte} and \textbf{Go}, supporting multi-mount browsing, chunked transfers, and real-time file updates.}
       \resumeItem{Added support for \textbf{most media content} with live preview/streaming/download capabilities, plus \textbf{Monaco Editor} integration for viewing and editing text-based files directly in the browser.}
     \resumeItemListEnd
-
-    \resumeProjectHeading
-      {Homelab Infrastructure}
-      {\emph{Self-hosted server for storage, remote access, and service deployment} $|$ \href{https://github.com/jR4dh3y/homelabs}{\textcolor{blue}{GitHub}}}
-      {Oct. 2025 -- Nov. 2025}
-    \resumeItemListStart
-      \resumeItem{Built a personal homelab on repurposed hardware running \textbf{Ubuntu Server}, using \textbf{Docker Compose} for service orchestration, \textbf{Cloudflare Tunnel} for secure remote access, and \textbf{Traefik} for reverse proxying.}
-      \resumeItem{This is where I host tools such as \textbf{ViDown} (\href{https://dl.jr4.in}{\textcolor{blue}{Live}} / \href{https://github.com/jR4dh3y/vidown}{\textcolor{blue}{GitHub}}) and \textbf{AnyConverter} (\href{https://anyconv.jr4.in/}{\textcolor{blue}{Live}} / \href{https://github.com/jR4dh3y/anyconverter}{\textcolor{blue}{GitHub}}), which I use directly in my day-to-day workflow.}
-      \resumeItem{Maintained a custom \textbf{CI/CD workflow} that tracks GitHub changes, pulls updates onto the server, syncs with self-hosted \textbf{Gitea}, and automatically redeploys services.}
-    \resumeItemListEnd
-
-    \pagebreak
-    
-    \resumeProjectHeading
-    {Dots-Niri}
-    {\emph{Automated Arch Linux dotfiles and installer for the Niri compositor}$|$ \href{https://rice.jr4.in/}{\textcolor{blue}{Website}} $|$ \href{https://github.com/jR4dh3y/dots-niri}{\textcolor{blue}{GitHub}} }
-    {Feb. 2025 -- Nov. 2025}
-    \resumeItemListStart
-    \resumeItem{Built a reproducible \textbf{NiriWM} rice and automation setup with an installer that provisions packages, symlinks configs, copies assets, and enables desktop services on Arch Linux; it is currently my \textbf{most popular GitHub repository}.}
-    \resumeItem{Extended the same Linux desktop workflow with companion tools including \textbf{WallPy-Gui} (\href{https://github.com/jR4dh3y/wallpygui}{\textcolor{blue}{GitHub}}), a wallpaper manager for Wayland compositors, and \textbf{iwd-applet} (\href{https://github.com/jR4dh3y/iwd-applet}{\textcolor{blue}{GitHub}}), a tray applet for menu-driven wireless management through \textbf{iwd}.}
-    \resumeItemListEnd
+        \resumeProjectHeading
+        {Homelab Infrastructure}
+        {\emph{Self-hosted server for storage, remote access, and service deployment} $|$ \href{https://github.com/jR4dh3y/homelabs}{\textcolor{blue}{GitHub}}}
+        {Oct. 2025 -- Nov. 2025}
+        \resumeItemListStart
+        \resumeItem{Built a personal homelab on repurposed hardware running \textbf{Ubuntu Server}, using \textbf{Docker Compose} for service orchestration, \textbf{Cloudflare Tunnel} for secure remote access, and \textbf{Traefik} for reverse proxying.}
+        \resumeItem{This is where I host tools such as \textbf{ViDown} (\href{https://dl.jr4.in}{\textcolor{blue}{Live}} / \href{https://github.com/jR4dh3y/vidown}{\textcolor{blue}{GitHub}}) and \textbf{AnyConverter} (\href{https://anyconv.jr4.in/}{\textcolor{blue}{Live}} / \href{https://github.com/jR4dh3y/anyconverter}{\textcolor{blue}{GitHub}}), which I use directly in my day-to-day workflow.}
+        \resumeItem{Maintained a custom \textbf{CI/CD workflow} that tracks GitHub changes, pulls updates onto the server, syncs with self-hosted \textbf{Gitea}, and automatically redeploys services.}
+        \resumeItemListEnd
+        
 
     \resumeProjectHeading
       {Additional Projects}{}{ }
     \resumeItemListStart
+      \resumeCompactProject
+        {Dots-Niri}
+        {\href{https://rice.jr4.in/}{\textcolor{blue}{Website}} $|$ \href{https://github.com/jR4dh3y/dots-niri}{\textcolor{blue}{GitHub}}}
+        {Replicates my full NiriWM rice on Arch-based systems with a single \texttt{curl} command and a guided one-shot TUI installer workflow}
+      \resumeCompactProject
+        {WallPy-Gui}
+        {\href{https://github.com/jR4dh3y/wallpygui}{\textcolor{blue}{GitHub}}}
+        {Wallpaper GUI app for Wayland with support for image, GIF, and video formats}
+      \resumeCompactProject
+        {iwd-applet}
+        {\href{https://github.com/jR4dh3y/iwd-applet}{\textcolor{blue}{GitHub}}}
+        {Wi-Fi tray applet for menu-driven wireless management using \texttt{iwd} on Linux}
       \resumeCompactProject
         {HowTo}
         {\href{https://howto.jr4.in/}{\textcolor{blue}{Live}} $|$ \href{https://github.com/jR4dh3y/howTo}{\textcolor{blue}{GitHub}}}
@@ -232,11 +244,11 @@
       \resumeCompactProject
         {Pico32}
         {\href{https://pico32.radhey.dev}{\textcolor{blue}{Website}} $|$ \href{https://github.com/jR4dh3y/Pico32}{\textcolor{blue}{GitHub}}}
-        {C++/PlatformIO serial TUI for portable ESP32 Wi-Fi and Bluetooth pentesting workflows}
+        {C++/PlatformIO serial TUI for ESP32 Wi-Fi and Bluetooth pentesting workflows}
       \resumeCompactProject
         {TL;DR}
         {\href{https://github.com/jR4dh3y/tldr-desktop}{\textcolor{blue}{GitHub}}}
-        {Electron desktop app that summarizes WhatsApp chats with OpenRouter-compatible AI models}
+        {Electron app that summarizes WhatsApp chats with OpenRouter compatible AI models}
       \resumeCompactProject
         {Community Leaderboard}
         {\href{https://dash.radhey.dev/}{\textcolor{blue}{Live}} $|$ \href{https://github.com/jR4dh3y/unidash}{\textcolor{blue}{GitHub}}}
@@ -252,7 +264,7 @@
       \resumeCompactProject
         {Terminal Doom}
         {\href{https://github.com/jR4dh3y/doom-in-terminal}{\textcolor{blue}{GitHub}}}
-        {Doom-inspired terminal game built with C++, ncurses, and CMake}
+        {Doom-inspired terminal game built with C++, \texttt{ncurses}, and \texttt{CMake}}
     \resumeItemListEnd
           
     \resumeSubHeadingListEnd
