@@ -1,0 +1,264 @@
+%-------------------------
+% Resume in Latex
+% Author : Radhey Kalra
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{5pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[5]{%
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}
+  % Optional 3rd line
+  \if\relax\detokenize{#5}\relax
+  \else
+    {\small #5}
+  \fi
+  \vspace{-6pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[3]{%
+    \item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #3 \\
+    \end{tabular*}
+    \if\relax\detokenize{#2}\relax
+    \else
+      {\small #2\par}
+    \fi
+    \vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\newcommand{\resumeCompactProject}[3]{%
+  \resumeItem{\textbf{#1} --- #3%
+  \if\relax\detokenize{#2}\relax
+  \else
+    \space(#2)%
+  \fi}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+  {\Huge \scshape Radhey Kalra} \\ \vspace{1pt}
+    \small +91 6005104654 $|$ 
+      radheykalra901@gmail.com $|$
+      radhey.dev $|$
+      linkedin.com/in/radheykalra $|$
+      github.com/jr4dh3y \\[4pt]
+      \small Full-stack developer focused on ML/audio systems, Linux tooling, and self-hosted infrastructure.
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bachelor of Technology in CSE}{Aug. 2023 -- May 2027}
+      {Model Institute of Engineering and Technology}{Jammu and Kashmir, India}
+      {}
+    \resumeSubheading
+      {Schooling}{2011 -- 2023}
+      {Air Force School, Jammu}{Jammu and Kashmir, India}
+      {}
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Languages}{: Python, C/C++, TypeScript, Go, SQL, Bash, PowerShell, QML, Vala} \\
+   \textbf{Frameworks \& Platforms}{: SvelteKit, React, Astro, Tailwind CSS, React Native, Bun} \\ 
+    \textbf{Developer Tools}{: Git, Docker, CI/CD, Cloudflare, Vercel, Kubernetes, Terraform} \\
+    \textbf{Databases \& Cloud}{: Convex, PostgreSQL, MySQL, AWS, GCP} \\
+    \textbf{Domains}{: Audio Processing, Linux Servers, Full-Stack Development} \\
+    }}
+ \end{itemize}
+ 
+ %-----------PROJECTS-----------
+ \vspace{-14pt}
+ \section{Projects}
+ \resumeSubHeadingListStart
+ \resumeProjectHeading
+ {Fast Blob Storage (FBS)}
+ {\emph{S3-compatible blob storage and CDN solution primarily for self-hosting}}
+ {Apr. 2026 -- Present}
+ \resumeItemListStart
+ \resumeItem{Developing a single-binary \textbf{Go} storage backend with \textbf{SQLite} metadata, optimized for single-node deployments and featuring \textbf{SvelteKit} dashboard.}
+ \resumeItemListEnd
+ 
+ \resumeProjectHeading
+ {HPOmen Linux (Victus Control)}
+ {\emph{Reverse-engineering HP OMEN control utility behavior on Linux}}
+ {Mar. 2026 -- Present}
+ \resumeItemListStart
+ \resumeItem{Developing a Linux-first OMEN/Victus control suite in \textbf{Vala} with a GTK4 monitor app, tray companion, and D-Bus helper; reverse-engineered \textbf{HP WMI/sysfs} behavior to validate profile/fan controls (\textbf{auto/max}), discussed findings with \texttt{platform-driver-x86} maintainers, and submitted a Linux kernel patch for custom fan RPM control in \texttt{hp\_wmi}.}
+ \resumeItemListEnd
+ 
+ \resumeProjectHeading
+ {BoxBox}
+ {\emph{Self-hosted file management system for Linux servers}}
+ {Nov. 2025 -- Present}
+ \resumeItemListStart
+ \resumeItem{Built a \textbf{lightweight} self-hosted file manager in \textbf{Svelte + Go} with multi-mount browsing, chunked transfers, real-time updates, media preview/stream/download support, and \textbf{Monaco Editor} for in-browser text editing.}
+ \resumeItemListEnd
+ 
+ \resumeProjectHeading
+ {U-Net Audio Filter}
+ {\emph{Audio enhancement by removing background noise}}
+ {Jul. 2025 -- Present}
+ \resumeItemListStart
+ \resumeItem{Building an audio enhancement system with a \textbf{custom U-Net-inspired architecture} and end-to-end denoising/source-separation pipeline with early results showing minor gains over open-source baselines .}
+ \resumeItemListEnd
+ \resumeProjectHeading
+ {Additional Projects}{}{ }
+ \resumeItemListStart
+ \resumeCompactProject
+ {Homelab Infrastructure}
+ {}
+ {Infrastructure as Code (IaC) for my self-hosted server storage, remote access, and service deployment}
+ \resumeCompactProject
+ {Dots-Niri}
+ {}
+ {Replicates my full NiriWM rice on any Arch-based systems with a single \texttt{curl} command}
+ \resumeCompactProject
+ {Pico32}
+ {}
+ {C++/PlatformIO serial TUI for ESP32 Wi-Fi and Bluetooth pentesting workflows}
+ \resumeCompactProject
+ {TL;DR}
+ {}
+ {Electron app that summarizes WhatsApp chats with OpenRouter compatible AI models}
+ \resumeCompactProject
+ {Hotel Booking}
+ {}
+ {Svelte/Express/MySQL booking platform with authentication and admin workflows}
+ \resumeCompactProject
+ {Tenant Manager}
+ {}
+ {React Native app for managing tenants and tracking electricity usage}
+\resumeItemListEnd
+ 
+ \resumeSubHeadingListEnd
+ 
+ 
+ %-----------CO-CURRICULAR ACTIVITIES-----------
+ \section{Co-curricular Activities}
+   \resumeSubHeadingListStart      
+     \resumeSubheading
+       {IDE Bootcamp Edition 3 Team Leader -- 2nd Place}{Apr. 2026}
+       {Innovation, Design, and Entrepreneurship (IDE) Bootcamp}{GNDEC, Ludhiana, Punjab}
+       {}
+       \resumeItemListStart
+         \resumeItem{Led a team to secure \textbf{2nd Place} by developing an AI-powered B2B SaaS product for automated presentation generation from user-uploaded templates and documents.}
+         \resumeItem{Participated in an immersive bootcamp organized by AICTE and MoE's Innovation Cell, applying rapid prototyping and business modeling strategies.}
+       \resumeItemListEnd
+
+     \resumeSubheading
+       {Cloud Lead / Cloud and DevOps Lead}{Aug. 2025 -- Present}
+       {GDGoC (Google Developer Groups on Campus) \& AWS Cloud Club, MIET Jammu}{Jammu and Kashmir, India}
+       {}
+       \resumeItemListStart
+         \resumeItem{Led cloud learning and DevOps initiatives through hands-on \textbf{Google Cloud} and \textbf{AWS} workshops, guided sessions for \textbf{100+ students}, and collaborative projects focused on containerization, deployment automation, and infrastructure best practices.}
+         \resumeItem{Built a tutorial platform with \textbf{20+} lab walkthroughs, notes, and video resources to support \textbf{Google Cloud Study Jam} completion.}
+       \resumeItemListEnd
+   \resumeSubHeadingListEnd
+ %----------- Certifications \& Programs-----------
+ \section{Certifications \& Programs}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \footnotesize{\item{
+     \textbf{ServiceNow Basics: IT Automation, AI-Powered Workflows - Coursera} \\[2pt]
+     \textbf{Google Cybersecurity - Coursera} \\[2pt]
+     \textbf{Cisco Cybersecurity Operations Fundamentals - Coursera} \\[2pt]
+     \textbf{Palo Alto Networks Cybersecurity - Coursera} \\[2pt]
+     \textbf{Nptel Ethical Hacking - IIT Kharagpur} \\[2pt]
+     \textbf{Nptel Deep Learning - IIT Ropar} \\[2pt]
+     \textbf{IBM SkillsBuild: AI Agent Architect} \\[2pt]
+     \textbf{IDE Bootcamp (AICTE / MoE)} \\[2pt]
+    }}
+ \end{itemize}
+
+\end{document}
