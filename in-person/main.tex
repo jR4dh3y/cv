@@ -10,7 +10,7 @@
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
@@ -18,6 +18,8 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{fontawesome5}
 \input{glyphtounicode}
 
 
@@ -44,8 +46,8 @@
 \addtolength{\oddsidemargin}{-0.57in}
 \addtolength{\evensidemargin}{-0.57in}
 \addtolength{\textwidth}{1.14in}
-\addtolength{\topmargin}{-.68in}
-\addtolength{\textheight}{1.28in}
+\addtolength{\topmargin}{-.76in}
+\addtolength{\textheight}{1.56in}
 
 \urlstyle{same}
 
@@ -53,12 +55,19 @@
 \raggedright
 \linespread{1.0}
 \setlength{\tabcolsep}{0in}
+\setlength{\parskip}{0pt}
 \setlist[itemize]{leftmargin=0.15in, itemsep=1pt, topsep=2pt, parsep=0pt, partopsep=0pt}
+
+\definecolor{accent}{HTML}{0F766E}
+\definecolor{accentdark}{HTML}{134E4A}
+\definecolor{accentsoft}{HTML}{E6FFFB}
+\definecolor{ink}{HTML}{111827}
+\definecolor{muted}{HTML}{4B5563}
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-6pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-5pt}\color{accentdark}\scshape\raggedright\large
+}{}{0em}{}[{\color{accent}\titlerule[0.9pt]} \vspace{-3pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -71,8 +80,9 @@
   }
 }
 
+\newcommand{\contactSep}{\textcolor{accent}{\hspace{0.45em}\textbullet\hspace{0.45em}}}
 \newcommand{\resumeSubheading}[5]{%
-  \vspace{-1pt}\item
+  \vspace{0pt}\item
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \textit{\normalsize #3} & \textit{\normalsize #4} \\
@@ -82,7 +92,7 @@
   \else
     {\normalsize #5}
   \fi
-  \vspace{-2pt}
+  \vspace{-1pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -93,7 +103,7 @@
 }
 
 \newcommand{\resumeProjectHeading}[3]{%
-    \vspace{0pt}\item
+    \vspace{1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & \normalsize #3 \\
     \end{tabular*}
@@ -101,7 +111,7 @@
     \else
       {\normalsize #2\par}
     \fi
-    \vspace{-2pt}
+    \vspace{-1pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -114,26 +124,31 @@
   \fi}
 }
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemi{\textcolor{accent}{\scriptsize$\bullet$}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny\textcolor{accent}{$\bullet$}}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-4pt}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in, itemsep=1pt, topsep=1pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
 
 \begin{document}
 
 %----------HEADING----------
 
-\begin{center}
-  {\Huge \scshape Radhey Kalra} \\ \vspace{1pt}
-    \small +91 6005104654 $|$ 
-      radheykalra901@gmail.com $|$
-      radhey.dev $|$
-      linkedin.com/in/radheykalra $|$
-      github.com/jr4dh3y \\[2pt]
-      \small Full-stack developer focused on ML/audio systems, Linux tooling, and self-hosted infrastructure.
-\end{center}\vspace{-6pt}
+\noindent
+\begin{minipage}[c]{\textwidth}
+  {\Huge \color{ink}\scshape Radhey Kalra} \\[2pt]
+  \resizebox{\textwidth}{!}{\footnotesize
+    \textcolor{accent}{\faIcon{phone-alt}}\hspace{0.45em}+91 6005104654\contactSep
+    \textcolor{accent}{\faIcon{envelope}}\hspace{0.25em}radheykalra901@gmail.com\contactSep
+    \textcolor{accent}{\faIcon{globe}}\hspace{0.25em}radhey.dev\contactSep
+    \textcolor{accent}{\faIcon{linkedin}}\hspace{0.25em}linkedin.com/in/radheykalra\contactSep
+    \textcolor{accent}{\faIcon{github}}\hspace{0.25em}github.com/jr4dh3y
+  } \\[3pt]
+  {\small\color{muted} Full-stack developer focused on ML/audio systems, Linux tooling, and self-hosted infrastructure.}
+\end{minipage}%
+\vspace{-1pt}
 
 
 %-----------EDUCATION-----------
