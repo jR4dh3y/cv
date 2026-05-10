@@ -4,7 +4,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -17,6 +17,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{microtype}
 \input{glyphtounicode}
 
 
@@ -40,21 +41,23 @@
 \setlength{\footskip}{5pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\oddsidemargin}{-0.57in}
+\addtolength{\evensidemargin}{-0.57in}
+\addtolength{\textwidth}{1.14in}
+\addtolength{\topmargin}{-.68in}
+\addtolength{\textheight}{1.28in}
 
 \urlstyle{same}
 
 \raggedbottom
 \raggedright
+\linespread{1.0}
 \setlength{\tabcolsep}{0in}
+\setlist[itemize]{leftmargin=0.15in, itemsep=1pt, topsep=2pt, parsep=0pt, partopsep=0pt}
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-6pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -63,23 +66,23 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
+  \item\normalsize{
+    {#1 \vspace{-1pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[5]{%
-  \vspace{-2pt}\item
+  \vspace{-1pt}\item
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
-    \textit{\small #3} & \textit{\small #4} \\
+    \textit{\normalsize #3} & \textit{\normalsize #4} \\
   \end{tabular*}
   % Optional 3rd line
   \if\relax\detokenize{#5}\relax
   \else
-    {\small #5}
+    {\normalsize #5}
   \fi
-  \vspace{-6pt}
+  \vspace{-2pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -90,15 +93,15 @@
 }
 
 \newcommand{\resumeProjectHeading}[3]{%
-    \item
+    \vspace{0pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \small #3 \\
+      \textbf{#1} & \normalsize #3 \\
     \end{tabular*}
     \if\relax\detokenize{#2}\relax
     \else
-      {\small #2\par}
+      {\normalsize #2\par}
     \fi
-    \vspace{-7pt}
+    \vspace{-2pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -114,9 +117,9 @@
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-4pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
 
 \begin{document}
 
@@ -128,9 +131,9 @@
       radheykalra901@gmail.com $|$
       radhey.dev $|$
       linkedin.com/in/radheykalra $|$
-      github.com/jr4dh3y \\[4pt]
+      github.com/jr4dh3y \\[2pt]
       \small Full-stack developer focused on ML/audio systems, Linux tooling, and self-hosted infrastructure.
-\end{center}
+\end{center}\vspace{-6pt}
 
 
 %-----------EDUCATION-----------
@@ -151,15 +154,14 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
     \textbf{Languages}{: Python, C/C++, TypeScript, Go, SQL, Bash, PowerShell, QML, Vala} \\
-   \textbf{Frameworks \& Platforms}{: SvelteKit, React, Astro, Tailwind CSS, React Native, Bun} \\ 
+    \textbf{Frameworks \& Platforms}{: SvelteKit, React, Astro, Tailwind CSS, React Native, Bun} \\
     \textbf{Developer Tools}{: Git, Docker, CI/CD, Cloudflare, Vercel, Kubernetes, Terraform} \\
     \textbf{Databases \& Cloud}{: Convex, PostgreSQL, MySQL, AWS, GCP} \\
-    \textbf{Domains}{: Audio Processing, Linux Servers, Full-Stack Development} \\
+    \textbf{Domains}{: Audio Processing, Linux Servers, Full-Stack Development}
     }}
- \end{itemize}
+ \end{itemize}\vspace{-7pt}
  
  %-----------PROJECTS-----------
- \vspace{-14pt}
  \section{Projects}
  \resumeSubHeadingListStart
  \resumeProjectHeading
@@ -167,7 +169,7 @@
  {\emph{S3-compatible blob storage and CDN solution primarily for self-hosting}}
  {Apr. 2026 -- Present}
  \resumeItemListStart
- \resumeItem{Developing a single-binary \textbf{Go} storage backend with \textbf{SQLite} metadata, optimized for single-node deployments and featuring \textbf{SvelteKit} dashboard.}
+ \resumeItem{Developing a single-binary \textbf{Go} storage backend with \textbf{SQLite} metadata, optimized for single-node deployments and featuring a \textbf{SvelteKit} dashboard.}
  \resumeItemListEnd
  
  \resumeProjectHeading
@@ -175,7 +177,7 @@
  {\emph{Reverse-engineering HP OMEN control utility behavior on Linux}}
  {Mar. 2026 -- Present}
  \resumeItemListStart
- \resumeItem{Developing a Linux-first OMEN/Victus control suite in \textbf{Vala} with a GTK4 monitor app, tray companion, and D-Bus helper; reverse-engineered \textbf{HP WMI/sysfs} behavior to validate profile/fan controls (\textbf{auto/max}), discussed findings with \texttt{platform-driver-x86} maintainers, and submitted a Linux kernel patch for custom fan RPM control in \texttt{hp\_wmi}.}
+ \resumeItem{Developing a Linux-first OMEN/Victus suite in \textbf{Vala} with GTK4 monitor, tray companion, and D-Bus helper; reverse-engineered \textbf{HP WMI/sysfs} profile/fan controls (\textbf{auto/max}), discussed findings with \texttt{platform-driver-x86} maintainers, and submitted a Linux kernel patch for custom fan RPM control in \texttt{hp\_wmi}.}
  \resumeItemListEnd
  
  \resumeProjectHeading
@@ -183,7 +185,7 @@
  {\emph{Self-hosted file management system for Linux servers}}
  {Nov. 2025 -- Present}
  \resumeItemListStart
- \resumeItem{Built a \textbf{lightweight} self-hosted file manager in \textbf{Svelte + Go} with multi-mount browsing, chunked transfers, real-time updates, media preview/stream/download support, and \textbf{Monaco Editor} for in-browser text editing.}
+ \resumeItem{Built a \textbf{lightweight} self-hosted file manager in \textbf{Svelte + Go} with multi-mount browsing, chunked transfers, real-time updates, media preview/stream/download support, and \textbf{Monaco Editor} text editing.}
  \resumeItemListEnd
  
  \resumeProjectHeading
@@ -191,36 +193,18 @@
  {\emph{Audio enhancement by removing background noise}}
  {Jul. 2025 -- Present}
  \resumeItemListStart
- \resumeItem{Building an audio enhancement system with a \textbf{custom U-Net-inspired architecture} and end-to-end denoising/source-separation pipeline with early results showing minor gains over open-source baselines .}
+ \resumeItem{Building an audio enhancement system with a \textbf{custom U-Net-inspired architecture} and end-to-end denoising/source-separation pipeline; early results show minor gains over open-source baselines.}
  \resumeItemListEnd
  \resumeProjectHeading
  {Additional Projects}{}{ }
- \resumeItemListStart
- \resumeCompactProject
- {Homelab Infrastructure}
- {}
- {Infrastructure as Code (IaC) for my self-hosted server storage, remote access, and service deployment}
- \resumeCompactProject
- {Dots-Niri}
- {}
- {Replicates my full NiriWM rice on any Arch-based systems with a single \texttt{curl} command}
- \resumeCompactProject
- {Pico32}
- {}
- {C++/PlatformIO serial TUI for ESP32 Wi-Fi and Bluetooth pentesting workflows}
- \resumeCompactProject
- {TL;DR}
- {}
- {Electron app that summarizes WhatsApp chats with OpenRouter compatible AI models}
- \resumeCompactProject
- {Hotel Booking}
- {}
- {Svelte/Express/MySQL booking platform with authentication and admin workflows}
- \resumeCompactProject
- {Tenant Manager}
- {}
- {React Native app for managing tenants and tracking electricity usage}
-\resumeItemListEnd
+ \begin{itemize}[leftmargin=0.18in, itemsep=0pt, topsep=2pt, parsep=0pt]
+ \item\small{\textbf{Homelab Infrastructure}: IaC for self-hosted server storage, remote access, and service deployment.}
+ \item\small{\textbf{Dots-Niri}: Single-\texttt{curl} NiriWM rice replication for Arch-based systems.}
+ \item\small{\textbf{Pico32}: C++/PlatformIO serial TUI for ESP32 Wi-Fi and Bluetooth pentesting workflows.}
+ \item\small{\textbf{TL;DR}: Electron WhatsApp chat summarizer with OpenRouter-compatible AI models.}
+ \item\small{\textbf{Hotel Booking}: Svelte/Express/MySQL booking platform with authentication and admin workflows.}
+ \item\small{\textbf{Tenant Manager}: React Native app for tenant management and electricity usage tracking.}
+ \end{itemize}\vspace{-1pt}
  
  \resumeSubHeadingListEnd
  
@@ -233,8 +217,7 @@
        {Innovation, Design, and Entrepreneurship (IDE) Bootcamp}{GNDEC, Ludhiana, Punjab}
        {}
        \resumeItemListStart
-         \resumeItem{Led a team to secure \textbf{2nd Place} by developing an AI-powered B2B SaaS product for automated presentation generation from user-uploaded templates and documents.}
-         \resumeItem{Participated in an immersive bootcamp organized by AICTE and MoE's Innovation Cell, applying rapid prototyping and business modeling strategies.}
+         \resumeItem{Led a team to \textbf{2nd Place} with an AI-powered B2B SaaS product for automated presentation generation from user-uploaded templates/documents; applied rapid prototyping and business modeling in an AICTE/MoE Innovation Cell bootcamp.}
        \resumeItemListEnd
 
      \resumeSubheading
@@ -242,23 +225,17 @@
        {GDGoC (Google Developer Groups on Campus) \& AWS Cloud Club, MIET Jammu}{Jammu and Kashmir, India}
        {}
        \resumeItemListStart
-         \resumeItem{Led cloud learning and DevOps initiatives through hands-on \textbf{Google Cloud} and \textbf{AWS} workshops, guided sessions for \textbf{100+ students}, and collaborative projects focused on containerization, deployment automation, and infrastructure best practices.}
-         \resumeItem{Built a tutorial platform with \textbf{20+} lab walkthroughs, notes, and video resources to support \textbf{Google Cloud Study Jam} completion.}
+         \resumeItem{Led cloud learning and DevOps initiatives through hands-on \textbf{Google Cloud}/\textbf{AWS} workshops, guided sessions for \textbf{100+ students}, collaborative projects on containerization, deployment automation, and infrastructure best practices, plus a tutorial platform with \textbf{20+} labs, notes, and videos for \textbf{Google Cloud Study Jam}.}
        \resumeItemListEnd
    \resumeSubHeadingListEnd
  %----------- Certifications \& Programs-----------
- \section{Certifications \& Programs}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \footnotesize{\item{
-     \textbf{ServiceNow Basics: IT Automation, AI-Powered Workflows - Coursera} \\[2pt]
-     \textbf{Google Cybersecurity - Coursera} \\[2pt]
-     \textbf{Cisco Cybersecurity Operations Fundamentals - Coursera} \\[2pt]
-     \textbf{Palo Alto Networks Cybersecurity - Coursera} \\[2pt]
-     \textbf{Nptel Ethical Hacking - IIT Kharagpur} \\[2pt]
-     \textbf{Nptel Deep Learning - IIT Ropar} \\[2pt]
-     \textbf{IBM SkillsBuild: AI Agent Architect} \\[2pt]
-     \textbf{IDE Bootcamp (AICTE / MoE)} \\[2pt]
-    }}
+ \section{Certificates}
+ \begin{itemize}[leftmargin=0.18in, itemsep=0pt, topsep=2pt, parsep=0pt]
+    \footnotesize
+    \item \textbf{Automation}: ServiceNow Basics: IT Automation, AI-Powered Workflows (Coursera).
+    \item \textbf{AI}: AI Agent Architect(IBM SkillsBuild).
+    \item \textbf{Cybersecurity}: Google Cybersecurity (Coursera); Cisco Cybersecurity Operations (Coursera); Palo Alto Networks Cybersecurity (Coursera).
+    \item \textbf{NPTEL}: Ethical Hacking (IIT Kharagpur); Deep Learning (IIT Ropar).
  \end{itemize}
 
 \end{document}
