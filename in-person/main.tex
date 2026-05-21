@@ -158,23 +158,11 @@
       {Bachelor of Technology in CSE}{Aug. 2023 -- May 2027}
       {Model Institute of Engineering and Technology}{Jammu and Kashmir, India}
       {}
-    \resumeSubheading
-      {Schooling}{2011 -- 2023}
-      {Air Force School, Jammu}{Jammu and Kashmir, India}
-      {}
   \resumeSubHeadingListEnd
  
  %-----------PROJECTS-----------
  \section{Projects}
  \resumeSubHeadingListStart
- \resumeProjectHeading
- {Fast Blob Storage (FBS)}
- {\emph{S3-compatible blob storage and CDN solution primarily for self-hosting}}
- {Apr. 2026 -- Present}
- \resumeItemListStart
- \resumeItem{Developing a single-binary \textbf{Go} storage backend with \textbf{SQLite} metadata, optimized for single-node deployments and featuring a \textbf{SvelteKit} dashboard.}
- \resumeItemListEnd
- 
  \resumeProjectHeading
  {HPOmen Linux (Victus Control)}
  {\emph{Reverse-engineering HP OMEN control utility behavior on Linux}}
@@ -199,10 +187,19 @@
  \resumeItem{Building an audio enhancement system with a \textbf{custom U-Net-inspired architecture} for end-to-end audio denoising; early results show minor gains over open-source baselines.}
  \resumeItemListEnd
  \resumeProjectHeading
+ {Fast Blob Storage (FBS)}
+ {\emph{S3-compatible blob storage and CDN solution}}
+ {Apr. 2026 -- May 2026}
+ \resumeItemListStart
+ \resumeItem{Built a single-binary \textbf{Go} storage backend with \textbf{SQLite} metadata, optimized for single-node deployments.}
+ \resumeItemListEnd
+ \resumeProjectHeading
  {Additional Projects}{}{ }
  \begin{itemize}[leftmargin=0.18in, itemsep=1.5pt, topsep=2pt, parsep=0pt]
+ \item\small{\textbf{QckPages}: Web app for publishing HTML pages, build with SvelteKit and FBS:Fast blob storage.}
  \item\small{\textbf{Homelab Infrastructure}: IaC for my self-hosted server, storage, remote access, and service deployment.}
  \item\small{\textbf{Dots-Niri}: My NiriWM dotfiles with single-\texttt{curl} replication on any Arch-based system.}
+ \item\small{\textbf{RSclip}: Rust Wayland clipboard manager with a low-memory daemon and OCR support.}
  \item\small{\textbf{Pico32}: C++/PlatformIO serial TUI built for ESP32 Wi-Fi and Bluetooth pentesting workflows.}
  \item\small{\textbf{TL;DR}: Electron app to summarize WhatsApp chats with OpenRouter-compatible AI models.}
  \item\small{\textbf{Hotel Booking}: Svelte/Express/MySQL booking platform with authentication and admin workflows.}
@@ -235,7 +232,7 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-    \textbf{Languages}{: Python, C/C++, TypeScript, Go, SQL, Bash, PowerShell, QML, Vala} \\
+    \textbf{Languages}{: Python, C/C++, TypeScript, Go, Rust, SQL, Bash, PowerShell, QML, Vala} \\
     \textbf{Frameworks \& Platforms}{: SvelteKit, React, Astro, Tailwind CSS, React Native, Bun} \\
     \textbf{Developer Tools}{: Git, Docker, CI/CD, Cloudflare, Vercel, Kubernetes, Terraform} \\
     \textbf{Databases \& Cloud}{: Convex, PostgreSQL, MySQL, AWS, GCP} \\
@@ -246,12 +243,16 @@
 
    %----------- Certifications \& Programs-----------
  \section{Certificates}
- \begin{itemize}[leftmargin=0.18in, itemsep=0pt, topsep=2pt, parsep=0pt]
-    \small
-    \item \textbf{Automation}: ServiceNow Basics: IT Automation, AI-Powered Workflows (Coursera).
-    \item \textbf{Cybersecurity (Coursera) }: Google Cybersecurity; Cisco Cybersecurity Operations; Palo Alto Networks Cybersecurity.
-    \item \textbf{NPTEL}: Ethical Hacking (IIT Kharagpur); Deep Learning (IIT Ropar).
-    \item \textbf{AI}: AI Agent Architect(IBM SkillsBuild).
- \end{itemize}
+ {\footnotesize
+ \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\hspace{0.04\textwidth}}>{\raggedright\arraybackslash}p{0.48\textwidth}@{}}
+   \textbf{Cybersecurity} &
+   \textbf{AI} \\
+   \textbf{Coursera}: Google Cybersecurity; Cisco Cybersecurity Operations; EC-Council Cybersecurity Attack and Defense Fundamentals; Palo Alto Networks Cybersecurity.\par
+   \textbf{NPTEL}: Ethical Hacking (IIT Kharagpur) &
+   \textbf{NPTEL}: Deep Learning (IIT Ropar); Artificial Intelligence for Management.\par
+   \textbf{IBM SkillsBuild}: AI Agent Architect.\par
+   \textbf{Coursera}: ServiceNow AI-Powered Workflows
+ \end{tabularx}
+ }\vspace{-4pt}
 
 \end{document}
