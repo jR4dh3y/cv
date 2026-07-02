@@ -57,7 +57,7 @@
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
+% Ensure that generated pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
@@ -109,7 +109,7 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in, itemsep=1pt, topsep=1pt, parsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -119,13 +119,13 @@
 %----------HEADING----------
 
 \begin{center}
-  {\Huge \scshape Radhey Kalra} \\ \vspace{1pt}
-  \small +91 6005104654 $|$
-  \href{mailto:radheykalra901@gmail.com}{\underline{radheykalra901@gmail.com}} $|$
-  \href{https://radhey.dev}{\underline{Portfolio}} $|$
-  \href{https://linkedin.com/in/radheykalra}{\underline{LinkedIn}} $|$
-  \href{https://github.com/jr4dh3y}{\underline{GitHub}} \\[4pt]
-  \small Full-stack developer crafting ML/audio systems and self-hosted infrastructure.
+	{\Huge \scshape Radhey Kalra} \\ \vspace{1pt}
+	\small +91 6005104654 $|$
+	\href{mailto:radheykalra901@gmail.com}{\underline{radheykalra901@gmail.com}} $|$
+	\href{https://radhey.dev}{\underline{Portfolio}} $|$
+	\href{https://linkedin.com/in/radheykalra}{\underline{LinkedIn}} $|$
+	\href{https://github.com/jr4dh3y}{\underline{GitHub}} \\\[4pt]
+	\small Full-stack developer focused on ML/audio systems, Linux tooling, and self-hosted infrastructure.
 \end{center}
 
 
@@ -145,14 +145,13 @@
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
-  \small{\item{
-        \textbf{Languages}{: Python, C/C++, TypeScript/JavaScript, Go, Vala, SQL, Rust, Bash, PowerShell} \\
-        \textbf{Frameworks \& Platforms}{: SvelteKit, React, Next.js, Astro, Tailwind CSS, React Native, Expo, Bun, Node} \\
-        \textbf{Developer Tools}{: Git, Docker, CMake, CI/CD, Cloudflare, Vercel, Kubernetes, Terraform} \\
-        \textbf{Databases \& Cloud}{: Convex, PostgreSQL, MySQL, AWS, \href{https://www.skills.google/public_profiles/bfe09e57-861c-451d-a3b9-289d875f0030}{\textcolor{blue}{GCP}}} \\
-        \textbf{AI/ML Libraries}{: PyTorch, TensorFlow, Transformers, scikit-learn, NumPy, Pandas, Matplotlib, Seaborn} \\
-        \textbf{Domains}{: Deep Learning, Audio Processing, Linux Servers, Full-Stack Development, Networking} \\
-        }}
+	\small{\item{
+        	extbf{Languages}{: Python, C/C++, TypeScript, Go, Rust, SQL, Bash, PowerShell, QML, Vala} \\
+        	extbf{Frameworks \& Platforms}{: SvelteKit, React, Astro, Tailwind CSS, React Native, Bun} \\
+        	extbf{Developer Tools}{: Git, Docker, CI/CD, Cloudflare, Vercel, Kubernetes, Terraform} \\
+        	extbf{Databases \& Cloud}{: Convex, PostgreSQL, MySQL, AWS, GCP} \\
+        	extbf{Domains}{: Audio Processing, Linux Servers, Full-Stack Development} \\
+	      }}
 \end{itemize}
 
 %-----------PROJECTS-----------
@@ -165,16 +164,7 @@
 \resumeItemListStart
 \resumeItem{Built a \textbf{lightweight} self-hosted file manager in \textbf{Svelte + Go} with multi-mount browsing, chunked transfers, real-time updates, media preview/stream/download support, and \textbf{Monaco Editor} integration.}
 \resumeItem{Shipped production deployments as a \textbf{31MB single Go binary} with an embedded Svelte frontend and Docker-based setup.}
-\resumeItem{Grew the project to \textbf{200+ GitHub stars} and \textbf{3K+ downloads}.}
-\resumeItemListEnd
-\resumeProjectHeading
-{HPOmen Linux (Victus Control)}
-{\emph{Reverse-engineering HP OMEN control utility behavior on Linux} $|$ \href{https://github.com/jR4dh3y/HPOmen-linux}{\textcolor{blue}{GitHub}} $|$ \href{https://aur.archlinux.org/packages/victus-control-bin}{\textcolor{blue}{AUR}}}
-{Mar. 2026 -- Present}
-\resumeItemListStart
-\resumeItem{Developing a Linux-first OMEN/Victus control suite in \textbf{Vala} with a GTK4 monitor app, tray companion, D-Bus helper, and probe CLI.}
-\resumeItem{Reverse-engineered \textbf{HP WMI/sysfs} behavior to validate profile/fan controls (\textbf{auto/max}) and extend \texttt{hp\_wmi} with capability-gated safety fallbacks.}
-\resumeItem{Submitted a Linux kernel \texttt{hp-wmi} patch accepted into \texttt{platform-driver-x86}, adding Victus 15-fb0xxx board support for fan-control feature data; also provided \texttt{Tested-by} validation for another \texttt{hp-wmi} fan-control patch on real hardware.}
+\resumeItem{Grew the project to \textbf{200+ GitHub stars} and \textbf{4K+ downloads}.}
 \resumeItemListEnd
 \resumeProjectHeading
 {U-Net Audio Filter}
@@ -185,11 +175,20 @@
 \resumeItem{Implemented \textbf{Python/PyTorch + audio DSP} preprocessing, spectrogram modeling, and evaluation tooling, with early results showing minor gains over open-source baselines.}
 \resumeItemListEnd
 \resumeProjectHeading
+{HPOmen Linux (Victus Control)}
+{\emph{Reverse-engineering HP OMEN control utility behavior on Linux} $|$ \href{https://github.com/jR4dh3y/HPOmen-linux}{\textcolor{blue}{GitHub}} $|$ \href{https://aur.archlinux.org/packages/victus-control-bin}{\textcolor{blue}{AUR}}}
+{Mar. 2026 -- Jul. 2026}
+\resumeItemListStart
+\resumeItem{Built a Linux-first OMEN/Victus control suite in \textbf{Vala} with a GTK4 monitor app, tray companion, D-Bus helper, and probe CLI.}
+\resumeItem{Reverse-engineered \textbf{HP WMI/sysfs} behavior to validate profile/fan controls (\textbf{auto/max}) and extend \texttt{hp\_wmi} with capability-gated safety fallbacks.}
+\resumeItem{Submitted a Linux kernel \texttt{hp-wmi} patch accepted into \texttt{platform-driver-x86}, adding Victus 15-fb0xxx board support for fan-control feature data; also provided \texttt{Tested-by} validation for another \texttt{hp-wmi} fan-control patch on real hardware.}
+\resumeItemListEnd
+\resumeProjectHeading
 {Fast Blob Storage (FBS)}
 {\emph{S3-compatible blob storage and CDN solution primarily for self-hosting} $|$ \href{https://fbs-landing.vercel.app/}{\textcolor{blue}{Live}} $|$ \href{https://github.com/i-got-this-faa/fbs-core}{\textcolor{blue}{GitHub}} $|$ \href{https://github.com/i-got-this-faa/fbs-core/pkgs/container/fbs-core}{\textcolor{blue}{Docker}}}
 {Apr. 2026 -- May 2026}
 \resumeItemListStart
-\resumeItem{Built a single-binary \textbf{Go} storage backend with \textbf{SQLite} metadata,decoupled \textbf{SvelteKit} dashboard, and a published Docker image.}
+\resumeItem{Built a \textbf{Go} storage backend with \textbf{SQLite} metadata,\textbf{SvelteKit} dashboard, and a published Docker image.}
 \resumeItem{Reached \textbf{50+ GitHub stars} while supporting self-hosted S3-compatible object storage and CDN workflows.}
 \resumeItem{Supported Both SigV4 and bearer token authentication, using linux \texttt{sendfile()} for efficient zero-copy file transfers.}
 \resumeItem{Achieved binary sizes of\textbf{~15MB} and idel RSS of\textbf{~16MB} and under load RSS of\textbf{~21MB} in controled benchmarks, making it suitable for self-hosting on resource-constrained environments.}
@@ -206,22 +205,22 @@
 {rsclip}
 {\href{https://github.com/jR4dh3y/rsclip}{\textcolor{blue}{GitHub}} $|$ \href{https://aur.archlinux.org/packages/rsclip-bin}{\textcolor{blue}{AUR}}}
 {Rust Wayland clipboard manager with a low-memory daemon, GTK4 UI, SQLite history, search, filters, OCR Support and Secrets management}
-\resumeCompactProject
-{Homelab Infrastructure}
-{\href{https://github.com/jR4dh3y/homelabs}{\textcolor{blue}{GitHub}}}
-{Infrastructure as Code (IaC) for self-hosted server storage, remote access, and service deployment}
+% \resumeCompactProject
+% {Homelab Infrastructure}
+% {\href{https://github.com/jR4dh3y/homelabs}{\textcolor{blue}{GitHub}}}
+% {Infrastructure as Code (IaC) for self-hosted server storage, remote access, and service deployment}
 \resumeCompactProject
 {Dots-Niri}
 {\href{https://rice.jr4.in/}{\textcolor{blue}{Website}} $|$ \href{https://github.com/jR4dh3y/dots-niri}{\textcolor{blue}{GitHub}}}
-{Replicates my full NiriWM rice on Arch-based systems with a single \texttt{curl} command and a guided one-shot TUI installer workflow}
-\resumeCompactProject
-{WallPy-Gui}
-{\href{https://github.com/jR4dh3y/wallpygui}{\textcolor{blue}{GitHub}} $|$ \href{https://aur.archlinux.org/packages/wallpygui}{\textcolor{blue}{AUR}}}
-{Wallpaper GUI app for Wayland with support for image, GIF, and video formats}
-\resumeCompactProject
-{iwd-applet}
-{\href{https://github.com/jR4dh3y/iwd-applet}{\textcolor{blue}{GitHub}}}
-{Wi-Fi tray applet for menu-driven wireless management using \texttt{iwd} on Linux}
+{Replicates my NiriWM rice on Arch-based install with a single \texttt{curl} command}
+% \resumeCompactProject
+% {WallPy-Gui}
+% {\href{https://github.com/jR4dh3y/wallpygui}{\textcolor{blue}{GitHub}} $|$ \href{https://aur.archlinux.org/packages/wallpygui}{\textcolor{blue}{AUR}}}
+% {Wallpaper GUI app for Wayland with support for image, GIF, and video formats}
+% \resumeCompactProject
+% {iwd-applet}
+% {\href{https://github.com/jR4dh3y/iwd-applet}{\textcolor{blue}{GitHub}}}
+% {Wi-Fi tray applet for menu-driven wireless management using \texttt{iwd} on Linux}
 \resumeCompactProject
 {HowTo}
 {\href{https://howto.jr4.in/}{\textcolor{blue}{Live}} $|$ \href{https://github.com/jR4dh3y/howTo}{\textcolor{blue}{GitHub}}}
@@ -234,10 +233,10 @@
 {TL;DR}
 {\href{https://github.com/jR4dh3y/tldr-desktop}{\textcolor{blue}{GitHub}}}
 {Electron app that summarizes WhatsApp chats with OpenRouter compatible AI models}
-\resumeCompactProject
-{Community Leaderboard}
-{\href{https://dash.radhey.dev/}{\textcolor{blue}{Live}} $|$ \href{https://github.com/jR4dh3y/unidash}{\textcolor{blue}{GitHub}}}
-{Next.js dashboard for event tracking, rankings, and community participation insights}
+% \resumeCompactProject
+% {Community Leaderboard}
+% {\href{https://dash.radhey.dev/}{\textcolor{blue}{Live}} $|$ \href{https://github.com/jR4dh3y/unidash}{\textcolor{blue}{GitHub}}}
+% {Next.js dashboard for event tracking, rankings, and community participation insights}
 \resumeCompactProject
 {Hotel Booking}
 {\href{https://github.com/jR4dh3y/hotel-booking}{\textcolor{blue}{GitHub}}}
@@ -246,10 +245,10 @@
 {Tenant Manager}
 {\href{https://github.com/jR4dh3y/tennet-manager}{\textcolor{blue}{GitHub}}}
 {React Native app for managing tenants and tracking electricity usage}
-\resumeCompactProject
-{Terminal Doom}
-{\href{https://github.com/jR4dh3y/doom-in-terminal}{\textcolor{blue}{GitHub}}}
-{Doom-inspired terminal game built with C++, \texttt{ncurses}, and \texttt{CMake}}
+% \resumeCompactProject
+% {Terminal Doom}
+% {\href{https://github.com/jR4dh3y/doom-in-terminal}{\textcolor{blue}{GitHub}}}
+% {Doom-inspired terminal game built with C++, \texttt{ncurses}, and \texttt{CMake}}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -298,20 +297,19 @@
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-%----------- Certifications \& Programs-----------
-\section{Certifications \& Programs}
-\begin{itemize}[leftmargin=0.15in, label={}]
-  \footnotesize{\item{
-        \textbf{Google Cybersecurity - Coursera} $|$ \href{https://drive.google.com/file/d/1SIxLO0PLcOsLC0SQkZri6dQD1kyKAooL/view?usp=sharing}{\textcolor{blue}{Certificate}} \\[2pt]
-        \textbf{Cisco Cybersecurity Operations Fundamentals - Coursera} $|$ \href{https://drive.google.com/file/d/1GzR6t8wylBR3NqwdkuLobi6jAqEr0CcG/view?usp=sharing}{\textcolor{blue}{Certificate}} \\[2pt]
-        \textbf{EC-Council Cybersecurity Attack and Defense Fundamentals - Coursera} $|$ \href{https://drive.google.com/file/d/1JpG9iwP2Sq4JCl01PF6VVTFD9B1ZZT4M/view?usp=sharing}{\textcolor{blue}{Certificate}} \\[2pt]
-        \textbf{Palo Alto Networks Cybersecurity - Coursera} $|$ \href{https://drive.google.com/file/d/1ArLaJyIQP2R-S94KwshJRTgIQdjc3UCm/view?usp=sharing}{\textcolor{blue}{Certificate}} \\[2pt]
-        \textbf{Nptel Ethical Hacking - IIT Kharagpur} $|$ \href{https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs94/Course/NPTEL24CS94S35440004903810809.pdf}{\textcolor{blue}{Certificate}} \\[2pt]
-        \textbf{Nptel Deep Learning - IIT Ropar} $|$ \href{https://archive.nptel.ac.in/content/noc/NOC25/SEM2/Ecertificates/106/noc25-cs106/Course/NPTEL25CS106S45890051510210361.pdf}{\textcolor{blue}{Certificate}} \\[2pt]
-        \textbf{Nptel Artificial Intelligence for Management} $|$ \href{https://storage.googleapis.com/2026-mar-halltickets/certificate-generation-apr26/final/regular/noc26-cs10/NOC26CS10S25680056904212501.pdf?X-Goog-Algorithm=GOOG4-RSA-SHA256\&X-Goog-Credential=gcs-cert-signer\%40nptel-exam.iam.gserviceaccount.com\%2F20260521\%2Fauto\%2Fstorage\%2Fgoog4_request\&X-Goog-Date=20260521T072141Z\&X-Goog-Expires=900\&X-Goog-SignedHeaders=host\&X-Goog-Signature=01f74ccb636c40796d3bbf360f647fe4dc4576c8516aa7047d6543b2683e0055312049a307fd5fb46de6ae909aa6846858ae9ff13d331add6081fe4cf790701b50cc6f28a4f5610daac5b633648714279e5e678027e4835ff9a733eee71de8db2258d42a6e4ff709184d48972c7a03564dca7a9ba6eba1870b28da03a60c2b637fb0ac8992f9efea665954c3aaefeee81fdf2a43f73e0e890b5f009737bb2e44d89b0049b5c1e7790227c86b88d0294ae31a8e0e40bc0838705dbefbc56e34df2601df11d28fc2d35f85b28a0bf440c1f2f0d2dc0aa93b027fdceb4fd9d7efef3c99efc6d5b1905f4b5ee2884cb45497764410e7479da59f01ae1aa4b5c428a0}{\textcolor{blue}{Certificate}} \\[2pt]
-        \textbf{IBM SkillsBuild: AI Agent Architect} $|$ \href{https://drive.google.com/file/d/19Pmeutg62bbuCQ1M5NDx4nc2zKQgZ2ig/view}{\textcolor{blue}{Certificates}} \\[2pt]
-        \textbf{IDE Bootcamp (AICTE / MoE)} $|$ \href{https://drive.google.com/file/d/1zPWEANVHF5TArUIdF3m7mu7goTPxbUPX/view?usp=sharing}{\textcolor{blue}{Certificate}}
-        }}
-\end{itemize}
+%----------- Certifications & Programs-----------
+\section{Certificates}
+ {\footnotesize
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\hspace{0.04\textwidth}}>{\raggedright\arraybackslash}p{0.48\textwidth}@{} }
+  \textbf{Cybersecurity}                          &
+  \textbf{AI}                                       \\
+  \textbf{Coursera}: Google Cybersecurity; Cisco Cybersecurity Operations; EC-Council Cybersecurity Attack and Defense Fundamentals; Palo Alto Networks Cybersecurity.\par
+  \textbf{NPTEL}: Ethical Hacking (IIT Kharagpur) &
+  \textbf{NPTEL}: Deep Learning (IIT Ropar); Artificial Intelligence for Management.\par
+  \textbf{IBM SkillsBuild}: AI Agent Architect.\par
+  \textbf{Coursera}: ServiceNow AI-Powered Workflows
+  \end{tabularx}
+ }
+\vspace{-4pt}
 
 \end{document}
