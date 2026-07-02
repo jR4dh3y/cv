@@ -159,21 +159,22 @@
 \section{Projects}
 \resumeSubHeadingListStart
 \resumeProjectHeading
+{BoxBox}
+{\emph{Self-hosted file management system for Linux servers} $|$ \href{https://boxbox.radhey.dev/}{\textcolor{blue}{Website}} $|$ \href{https://github.com/jR4dh3y/BoxBox}{\textcolor{blue}{GitHub}}}
+{Nov. 2025 -- Present}
+\resumeItemListStart
+\resumeItem{Built a \textbf{lightweight} self-hosted file manager in \textbf{Svelte + Go} with multi-mount browsing, chunked transfers, real-time updates, media preview/stream/download support, and \textbf{Monaco Editor} integration.}
+\resumeItem{Shipped production deployments as a \textbf{31MB single Go binary} with an embedded Svelte frontend and Docker-based setup.}
+\resumeItem{Grew the project to \textbf{200+ GitHub stars} and \textbf{3K+ downloads}.}
+\resumeItemListEnd
+\resumeProjectHeading
 {HPOmen Linux (Victus Control)}
 {\emph{Reverse-engineering HP OMEN control utility behavior on Linux} $|$ \href{https://github.com/jR4dh3y/HPOmen-linux}{\textcolor{blue}{GitHub}} $|$ \href{https://aur.archlinux.org/packages/victus-control-bin}{\textcolor{blue}{AUR}}}
 {Mar. 2026 -- Present}
 \resumeItemListStart
 \resumeItem{Developing a Linux-first OMEN/Victus control suite in \textbf{Vala} with a GTK4 monitor app, tray companion, D-Bus helper, and probe CLI.}
 \resumeItem{Reverse-engineered \textbf{HP WMI/sysfs} behavior to validate profile/fan controls (\textbf{auto/max}) and extend \texttt{hp\_wmi} with capability-gated safety fallbacks.}
-\resumeItem{Proposed and upstreamed a patch to platform driver x86 in the Linux kernel to expose missing sysfs controls.}
-\resumeItemListEnd
-\resumeProjectHeading
-{BoxBox}
-{\emph{Self-hosted file management system for Linux servers} $|$ \href{https://boxbox.radhey.dev/}{\textcolor{blue}{Website}} $|$ \href{https://github.com/jR4dh3y/BoxBox}{\textcolor{blue}{GitHub}}}
-{Nov. 2025 -- Present}
-\resumeItemListStart
-\resumeItem{Built a \textbf{lightweight} self-hosted file manager in \textbf{Svelte + Go} with multi-mount browsing, chunked transfers, and real-time updates.}
-\resumeItem{Added media preview/stream/download support and \textbf{Monaco Editor} integration for in-browser text file editing.}
+\resumeItem{Submitted a Linux kernel \texttt{hp-wmi} patch accepted into \texttt{platform-driver-x86}, adding Victus 15-fb0xxx board support for fan-control feature data; also provided \texttt{Tested-by} validation for another \texttt{hp-wmi} fan-control patch on real hardware.}
 \resumeItemListEnd
 \resumeProjectHeading
 {U-Net Audio Filter}
@@ -189,6 +190,7 @@
 {Apr. 2026 -- May 2026}
 \resumeItemListStart
 \resumeItem{Built a single-binary \textbf{Go} storage backend with \textbf{SQLite} metadata,decoupled \textbf{SvelteKit} dashboard, and a published Docker image.}
+\resumeItem{Reached \textbf{50+ GitHub stars} while supporting self-hosted S3-compatible object storage and CDN workflows.}
 \resumeItem{Supported Both SigV4 and bearer token authentication, using linux \texttt{sendfile()} for efficient zero-copy file transfers.}
 \resumeItem{Achieved binary sizes of\textbf{~15MB} and idel RSS of\textbf{~16MB} and under load RSS of\textbf{~21MB} in controled benchmarks, making it suitable for self-hosting on resource-constrained environments.}
 \resumeItemListEnd
