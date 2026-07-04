@@ -146,7 +146,7 @@
 		\textcolor{accent}{\faIcon{linkedin}}\hspace{0.25em}linkedin.com/in/radheykalra\contactSep
 		\textcolor{accent}{\faIcon{github}}\hspace{0.25em}github.com/jr4dh3y
 	} \\[3pt]
-	{\small\color{muted} Full-stack developer focused on ML/audio systems, Linux tooling, and self-hosted infrastructure.}
+	{\small\color{muted} Open source contributor and full-stack developer working across ML/audio systems, Linux tooling, and self-hosted infrastructure.}
 \end{minipage}%
 \vspace{-1pt}
 
@@ -157,6 +157,10 @@
 \resumeSubheading
 {Bachelor of Technology in CSE}{Aug. 2023 -- May 2027}
 {Model Institute of Engineering and Technology}{Jammu and Kashmir, India}
+{}
+\resumeSubheading
+{Schooling (Class I -- XII)}{2011 -- 2023}
+{Air Force School, Jammu}{Jammu and Kashmir, India}
 {}
 \resumeSubHeadingListEnd
 
@@ -170,15 +174,7 @@
 \resumeItemListStart
 \resumeItem{Built a \textbf{lightweight} self-hosted file manager in \textbf{Svelte + Go} with multi-mount browsing, chunked transfers, real-time updates, media preview/stream/download support, and Monaco Editor integration.}
 \resumeItem{Shipped production deployments as a \textbf{31MB single Go binary} with an embedded Svelte frontend and Docker-based setup.}
-\resumeItem{Grew the project to \textbf{200+ GitHub stars} and \textbf{3K+ downloads}.}
-\resumeItemListEnd
-
-\resumeProjectHeading
-{HPOmen Linux (Victus Control)}
-{\emph{Reverse-engineering HP OMEN control utility behavior on Linux}}
-{Mar. 2026 -- Jul. 2026}
-\resumeItemListStart
-\resumeItem{Built a Linux-first OMEN/Victus suite in \textbf{Vala} with GTK4 monitor, tray companion, and D-Bus helper; reverse-engineered \textbf{HP WMI/sysfs} profile/fan controls (\textbf{auto/max}), submitted an accepted Linux kernel \texttt{hp-wmi} patch for Victus 15-fb0xxx board support, and provided \texttt{Tested-by} validation for another fan-control patch on real hardware.}
+\resumeItem{Grew the project to \textbf{200+ GitHub stars} and \textbf{4K+ downloads}.}
 \resumeItemListEnd
 
 \resumeProjectHeading
@@ -186,26 +182,39 @@
 {\emph{Audio enhancement by removing background noise}}
 {Jul. 2025 -- Present}
 \resumeItemListStart
-\resumeItem{Building an audio enhancement system with a \textbf{custom U-Net-inspired architecture} for end-to-end audio denoising; early results show minor gains over open-source baselines.}
+\resumeItem{Building an audio enhancement system with a \textbf{custom U-Net-inspired architecture} and end-to-end audio denoising pipeline.}
+\resumeItem{Implemented \textbf{Python/PyTorch + audio DSP} preprocessing, spectrogram modeling, and evaluation tooling, with early results showing minor gains over open-source baselines.}
+\resumeItemListEnd
+\resumeProjectHeading
+{HPOmen Linux (Victus Control)}
+{\emph{Reverse-engineering HP OMEN control utility behavior on Linux}}
+{Mar. 2026 -- Jul. 2026}
+\resumeItemListStart
+\resumeItem{Built a Linux-first OMEN/Victus control suite in \textbf{Vala} with a GTK4 monitor app, tray companion, D-Bus helper, and probe CLI.}
+\resumeItem{Reverse-engineered \textbf{HP WMI/sysfs} behavior to validate profile/fan controls (\textbf{auto/max}) and extend \texttt{hp\_wmi} with capability-gated safety fallbacks.}
+\resumeItem{Submitted a Linux kernel \texttt{hp-wmi} patch accepted into \texttt{platform-driver-x86}, adding Victus 15-fb0xxx board support for fan-control feature data; also provided \texttt{Tested-by} validation for another \texttt{hp-wmi} fan-control patch on real hardware.}
 \resumeItemListEnd
 \resumeProjectHeading
 {Fast Blob Storage (FBS)}
-{\emph{S3-compatible blob storage and CDN solution}}
+{\emph{S3-compatible blob storage and CDN solution primarily for self-hosting}}
 {Apr. 2026 -- May 2026}
 \resumeItemListStart
-\resumeItem{Built a single-binary \textbf{Go} storage backend with \textbf{SQLite} metadata, optimized for single-node deployments, and grew the project to \textbf{50+ GitHub stars}.}
+\resumeItem{Built a \textbf{Go} storage backend with \textbf{SQLite} metadata,\textbf{SvelteKit} dashboard, and a published Docker image.}
+\resumeItem{Reached \textbf{50+ GitHub stars} while supporting self-hosted S3-compatible object storage and CDN workflows.}
+\resumeItem{Supported Both SigV4 and bearer token authentication, using linux \texttt{sendfile()} for efficient zero-copy file transfers.}
+\resumeItem{Achieved binary sizes of\textbf{~15MB} and idel RSS of\textbf{~16MB} and under load RSS of\textbf{~21MB} in controled benchmarks, making it suitable for self-hosting on resource-constrained environments.}
 \resumeItemListEnd
 \resumeProjectHeading
 {Additional Projects}{}{ }
 \begin{itemize}[leftmargin=0.18in, itemsep=1.5pt, topsep=2pt, parsep=0pt]
-	\item\small{\textbf{QckPages}: Web app for publishing HTML pages, build with SvelteKit and FBS:Fast blob storage.}
-	\item\small{\textbf{Homelab Infrastructure}: IaC for my self-hosted server, storage, remote access, and service deployment.}
-	\item\small{\textbf{Dots-Niri}: My NiriWM dotfiles with single-\texttt{curl} replication on any Arch-based system.}
-	\item\small{\textbf{RSclip}: Rust Wayland clipboard manager with a low-memory daemon and OCR support.}
+	\item\small{\textbf{QckPages}: SvelteKit/Convex app for publishing HTML pages, FBS-backed storage.}
+	\item\small{\textbf{rsclip}: Rust Wayland clipboard manager with a low-memory daemon, GTK4 UI, SQLite history, search, filters, OCR Support and Secrets management.}
+	\item\small{\textbf{Dots-Niri}: Replicates my NiriWM rice on Arch-based install with a single \texttt{curl} command.}
+	\item\small{\textbf{HowTo}: Astro tutorials site for practical hardware and software walkthroughs.}
 	\item\small{\textbf{Pico32}: C++/PlatformIO serial TUI built for ESP32 Wi-Fi and Bluetooth pentesting workflows.}
-	\item\small{\textbf{TL;DR}: Electron app to summarize WhatsApp chats with OpenRouter-compatible AI models.}
+	\item\small{\textbf{TL;DR}: Electron app that summarizes WhatsApp chats with OpenRouter compatible AI models.}
 	\item\small{\textbf{Hotel Booking}: Svelte/Express/MySQL booking platform with authentication and admin workflows.}
-	\item\small{\textbf{Tenant Manager}: React Native app for tenant management and electricity usage tracking.}
+	\item\small{\textbf{Tenant Manager}: React Native app for managing tenants and tracking electricity usage.}
 \end{itemize}\vspace{-1pt}
 
 \resumeSubHeadingListEnd
@@ -214,19 +223,43 @@
 \section{Co-curricular Activities}
 \resumeSubHeadingListStart
 \resumeSubheading
-{IDE Bootcamp -- Team Leader, 2nd Place}{Apr. 2026}
-{AICTE Innovation, Design, and Entrepreneurship Bootcamp}{GNDEC, Ludhiana}
+{Cloud Lead}{Aug. 2025 -- Present}
+{GDGoC (Google Developer Groups on Campus), MIET Jammu}{Jammu and Kashmir, India}
 {}
 \resumeItemListStart
-\resumeItem{Led team to \textbf{2nd Place} with an AI-powered B2B SaaS for automated presentation generation; applied rapid prototyping and business modeling during the AICTE/MoE Innovation Cell program.}
+\resumeItem{Led cloud learning initiatives through hands-on \textbf{Google Cloud} workshops and guided sessions for \textbf{100+ students}, and built a tutorial platform with \textbf{20+} lab walkthroughs, notes, and video resources to support \textbf{Google Cloud Study Jam} completion.}
 \resumeItemListEnd
 
 \resumeSubheading
-{Cloud and DevOps Lead}{Aug. 2025 -- Present}
-{Google Developer Groups on Campus \& AWS Cloud Club}{MIET, Jammu}
+{Cloud and DevOps Lead}{Jan. 2026 -- Present}
+{AWS Cloud Club MIET Jammu}{Jammu and Kashmir, India}
 {}
 \resumeItemListStart
-\resumeItem{Led hands-on \textbf{Google Cloud}/\textbf{AWS} workshops for \textbf{100+ students}, guided projects on containers and deployment automation, and built a tutorial platform with \textbf{20+} labs, notes, and videos for \textbf{Google Cloud Study Jam}.}
+\resumeItem{Lead cloud and DevOps initiatives through hands-on workshops, technical sessions, and collaborative projects, driving adoption of \textbf{AWS}, containerization, and infrastructure best practices focused on deployment automation and scalability.}
+\resumeItemListEnd
+
+\resumeSubheading
+{IDE Bootcamp Edition 3 Team Leader -- 2nd Place}{Apr. 2026}
+{Innovation, Design, and Entrepreneurship (IDE) Bootcamp}{GNDEC, Ludhiana, Punjab}
+{}
+\resumeItemListStart
+\resumeItem{Led a team to secure \textbf{2nd Place} at the AICTE/MoE Innovation Cell bootcamp by applying rapid prototyping and business modeling to develop an AI-powered B2B SaaS product for automated presentation generation from user-uploaded templates and documents.}
+\resumeItemListEnd
+
+\resumeSubheading
+{IDE Bootcamp Edition 2 Team Leader}{Feb. 2025}
+{Innovation, Design, and Entrepreneurship (IDE) Bootcamp}{IIT Jammu}
+{}
+\resumeItemListStart
+\resumeItem{Participated in a 5-day immersive bootcamp at IIT Jammu with Wadhwani Foundation, AICTE, and MoE's Innovation Cell, gaining business modeling, product design, and entrepreneurship experience while leading a team to develop a ``Sports Match Finder'' app using design thinking and the Lean Canvas model.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Hackathon Team Leader}{}
+{Internal Hackathon \& Smart India Hackathon (SIH 2024 \& 2025)}{MIET, Jammu}
+{}
+\resumeItemListStart
+\resumeItem{Led multidisciplinary teams in MIET's internal hackathon and Smart India Hackathon selection rounds in \textbf{2024} and \textbf{2025}, reaching the \textbf{top 9 teams in the college} both years through collaborative problem-solving, rapid prototyping, and real-world solution design.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd\vspace{1pt}
 
