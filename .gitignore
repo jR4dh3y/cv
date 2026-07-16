@@ -20,3 +20,5 @@ Thumbs.db
 *.swp
 *.swo
 .vscode/
+# Typst build artifacts
+typst/*.png
