@@ -159,12 +159,12 @@
 \resumeSubHeadingListStart
 \resumeProjectHeading
 {BoxBox}
-{\emph{Self-hosted file management system for Linux servers} $|$ \href{https://boxbox.radhey.dev/}{\textcolor{blue}{Website}} $|$ \href{https://github.com/jR4dh3y/BoxBox}{\textcolor{blue}{GitHub}}}
+{\emph{Self-hosted file management system for Linux servers} $|$ \href{https://boxbox.radhey.dev/}{\textcolor{blue}{Website}} $|$ \href{https://github.com/jR4dh3y/BoxBox}{\textcolor{blue}{GitHub}} $|$ \href{https://docker.radhey.dev/r/boxbox}{\textcolor{blue}{Docker}}}
 {Nov. 2025 -- Present}
 \resumeItemListStart
-\resumeItem{Built a \textbf{lightweight} self-hosted file manager in \textbf{Svelte + Go} with multi-mount browsing, chunked transfers, real-time updates, media preview/stream/download support, and \textbf{Monaco Editor} integration.}
-\resumeItem{Shipped production deployments as a \textbf{31MB single Go binary} with an embedded Svelte frontend and Docker-based setup.}
-\resumeItem{Grew the project to \textbf{200+ GitHub stars} and \textbf{4K+ downloads}.}
+\resumeItem{Built a lightweight self-hosted file manager in \textbf{Go + Svelte} for multi-mount browsing, chunked/resumable uploads, live job progress, media preview/streaming, and in-browser editing via \textbf{Monaco}.}
+\resumeItem{Ships as a \textbf{31MB single binary} with the UI embedded, plus a published Docker image (\texttt{latest}) for one-command homelab/NAS deploys.}
+\resumeItem{Grew the project to \textbf{200+ GitHub stars} and \textbf{5K+ downloads}.}
 \resumeItemListEnd
 \resumeProjectHeading
 {U-Net Audio Filter}
@@ -185,13 +185,12 @@
 \resumeItemListEnd
 \resumeProjectHeading
 {Fast Blob Storage (FBS)}
-{\emph{S3-compatible blob storage and CDN solution primarily for self-hosting} $|$ \href{https://fbs-landing.vercel.app/}{\textcolor{blue}{Live}} $|$ \href{https://github.com/i-got-this-faa/fbs-core}{\textcolor{blue}{GitHub}} $|$ \href{https://github.com/i-got-this-faa/fbs-core/pkgs/container/fbs-core}{\textcolor{blue}{Docker}}}
+{\emph{Self-hosted S3-compatible object storage for single-node / homelab deploys} $|$ \href{https://fbs-landing.vercel.app/}{\textcolor{blue}{Live}} $|$ \href{https://github.com/i-got-this-faa/fbs-core}{\textcolor{blue}{GitHub}} $|$ \href{https://github.com/i-got-this-faa/fbs-core/pkgs/container/fbs-core}{\textcolor{blue}{Docker}}}
 {Apr. 2026 -- May 2026}
 \resumeItemListStart
-\resumeItem{Built a \textbf{Go} storage backend with \textbf{SQLite} metadata,\textbf{SvelteKit} dashboard, and a published Docker image.}
-\resumeItem{Reached \textbf{50+ GitHub stars} while supporting self-hosted S3-compatible object storage and CDN workflows.}
-\resumeItem{Supported Both SigV4 and bearer token authentication, using linux \texttt{sendfile()} for efficient zero-copy file transfers.}
-\resumeItem{Achieved binary sizes of\textbf{~15MB} and idel RSS of\textbf{~16MB} and under load RSS of\textbf{~21MB} in controled benchmarks, making it suitable for self-hosting on resource-constrained environments.}
+\resumeItem{Built a single-node \textbf{S3-compatible} object store in \textbf{Go} (filesystem blobs + \textbf{SQLite} metadata) with a \textbf{SvelteKit} dashboard, shipped as a single binary and Docker image (\texttt{latest}).}
+\resumeItem{Features dual auth (\textbf{SigV4} + bearer), multipart uploads, a management API, and zero-copy Linux \texttt{sendfile()} egress for fast local downloads without distributed-storage overhead.}
+\resumeItem{Benchmarks: \textbf{\textasciitilde15MB} binary, \textbf{\textasciitilde14--16MB} idle RSS, up to \textbf{\textasciitilde1.3 GB/s} downloads / \textbf{\textasciitilde3.8 GB/s} concurrent aggregate---about \textbf{12--14$\times$} less memory than MinIO; \textbf{50+ GitHub stars}.}
 \resumeItemListEnd
 
 \resumeProjectHeading
