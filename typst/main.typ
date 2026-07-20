@@ -88,7 +88,7 @@
 #resume-item[
   - Made self-hosted file management practical on lightweight hardware: a *Go + Svelte* app supporting multi-mount browsing, chunked/resumable uploads, live job progress, media preview/streaming, and in-browser editing via *Monaco*, all in a ~31MB single binary.
   - Eliminated deployment friction with an embedded UI and a one-command Docker image for homelab and NAS setups.
-  - Reached *200+ GitHub stars* and *5K+ downloads*, confirming demand for a lighter alternative.
+  - Reached *200+ GitHub stars* and *7K+ downloads*, confirming demand for a lighter alternative.
 ]
 
 #resume-entry(
@@ -103,7 +103,7 @@
 )
 
 #resume-item[
-  - Brought S3-compatible storage to single-node and edge deployments by building a ~15MB *Go* binary (filesystem blobs + *SQLite* metadata) with a *SvelteKit* dashboard that idles at ~16MB RSS while saturating NVMe I/O.
+  - Led a team of 5 contributors to design and build a single-node *S3-compatible* object store in *Go*, coordinating API, storage, dashboard, and deployment work across a single-binary and Docker-based release.
   - Matched MinIO's core API (*SigV4* + bearer auth, multipart uploads, management API) at 12–14× less memory using zero-copy *sendfile()* egress instead of distributed-cluster overhead.
   - Grew to *50+ GitHub stars*, proving lightweight S3 can compete without sacrificing performance or compatibility.
 ]
