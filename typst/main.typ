@@ -16,6 +16,11 @@
 
 #let lnk(url, label) = link(url)[#label]
 
+// Keep the project name prominent while treating the stack as metadata.
+#let project-title(name, tech) = [
+  #name #text(size: 9.5pt, weight: "regular", fill: rgb("#555555"))[| #tech]
+]
+
 #show: resume.with(
   author: (
     firstname: "Radhey",
@@ -75,7 +80,7 @@
 = Projects
 
 #resume-entry(
-  title: "BoxBox",
+  title: project-title("BoxBox", "Go, TS, SvelteKit, Docker"),
   location: proj-links(
     lnk("https://boxbox.radhey.dev/", "Website"),
     lnk("https://github.com/jR4dh3y/BoxBox", "GitHub"),
@@ -86,13 +91,13 @@
 )
 
 #resume-item[
-  - Made self-hosted file management practical on lightweight hardware: a *Go + Svelte* app supporting multi-mount browsing, chunked/resumable uploads, live job progress, media preview/streaming, and in-browser editing via *Monaco*, all in a ~31MB single binary.
-  - Eliminated deployment friction with an embedded UI and a one-command Docker image for homelab and NAS setups.
+  - Made self-hosted file management practical on lightweight hardware with multi-mount browsing, chunked/resumable uploads, live job progress, media preview/streaming, and in-browser code editing, all in a ~31MB single binary.
+  - Eliminated deployment friction with an embedded UI and a one-command container image for homelab and NAS setups.
   - Reached *200+ GitHub stars* and *7K+ downloads*, confirming demand for a lighter alternative.
 ]
 
 #resume-entry(
-  title: "Fast Blob Storage (FBS)",
+  title: project-title("Fast Blob Storage (FBS)", "Go, S3, Docker, SQLite"),
   location: proj-links(
     lnk("https://fbs-landing.vercel.app/", "Website"),
     lnk("https://github.com/i-got-this-faa/fbs-core", "GitHub"),
@@ -103,13 +108,13 @@
 )
 
 #resume-item[
-  - Led a team of 5 contributors to design and build a single-node *S3-compatible* object store in *Go*, coordinating API, storage, dashboard, and deployment work across a single-binary and Docker-based release.
-  - Matched MinIO's core API (*SigV4* + bearer auth, multipart uploads, management API) at 12–14× less memory using zero-copy *sendfile()* egress instead of distributed-cluster overhead.
-  - Grew to *50+ GitHub stars*, proving lightweight S3 can compete without sacrificing performance or compatibility.
+  - Led a team of 5 contributors to design and build a single-node object store, coordinating API, storage, dashboard, and deployment work across a single-binary and containerized release.
+  - Matched MinIO's core API (SigV4 + bearer auth, multipart uploads, management API) at 12–14× less memory using zero-copy sendfile() egress instead of distributed-cluster overhead.
+  - Grew to *50+ GitHub stars*, proving lightweight object storage can compete without sacrificing performance or compatibility.
 ]
 
 #resume-entry(
-  title: "U-Net Audio Filter",
+  title: project-title("U-Net Audio Filter", "Python, PyTorch, CUDA"),
   location: proj-links(
     lnk("https://github.com/jR4dh3y/unet-audiofilter", "GitHub (private)"),
   ),
@@ -118,11 +123,11 @@
 )
 
 #resume-item[
-  - Improving audio denoising quality beyond existing open-source baselines with a custom *U-Net* architecture and *Python/PyTorch + audio DSP* preprocessing pipeline.
+  - Improving audio denoising quality beyond existing open-source baselines with a custom U-Net architecture and an audio preprocessing pipeline.
 ]
 
 #resume-entry(
-  title: "QckPages",
+  title: project-title("QckPages", "SvelteKit, Convex, Razorpay, FBS"),
   location: proj-links(
     lnk("https://qckpage.jr4.in/", "Live"),
     lnk("https://github.com/jR4dh3y/qckpages", "GitHub"),
@@ -132,8 +137,8 @@
 )
 
 #resume-item[
-  - Removed the infrastructure burden from publishing HTML pages: a *SvelteKit + Convex* platform with Better auth, Razorpay billing, and FBS-backed object storage so anyone can upload and get a live URL with no server management.
-  - Full self-serve product flow from signup and plan checkout to one-click publish and S3-backed page delivery.
+  - Removed the infrastructure burden from publishing HTML pages with authentication, billing, and object storage so anyone can upload and get a live URL with no server management.
+  - Full self-serve product flow from signup and plan checkout to one-click publish and hosted page delivery.
 ]
 
 #resume-entry(
@@ -143,14 +148,14 @@
 )
 
 #resume-item[
-  - *Victus Control* — Vala/GTK4 App to monitor, control fan speed, and power profiles for HP laptops #h(1fr) #proj-links(lnk("https://aur.archlinux.org/packages/victus-control-bin", "AUR"), lnk("https://github.com/jR4dh3y/HPOmen-linux", "GitHub"))
-  - *rsclip* — Rust Wayland clipboard manager with OCR and secrets management #h(1fr) #proj-links(lnk("https://aur.archlinux.org/packages/rsclip-bin", "AUR"), lnk("https://github.com/jR4dh3y/rsclip", "GitHub"))
-  - *Dots-Niri* — one-command NiriWM rice for Arch-based installs #h(1fr) #proj-links(lnk("https://rice.jr4.in/", "Website"), lnk("https://github.com/jR4dh3y/dots-niri", "GitHub"))
-  - *HowTo* — tutorials for practical hardware/software walkthroughs built with Astro #h(1fr) #proj-links(lnk("https://howto.jr4.in/", "Live"), lnk("https://github.com/jR4dh3y/howTo", "GitHub"))
-  - *Pico32* — C++/PlatformIO serial TUI for ESP32 Wi-Fi/BT pentesting #h(1fr) #proj-links(lnk("https://pico32.radhey.dev", "Website"), lnk("https://github.com/jR4dh3y/Pico32", "GitHub"))
-  - *TL;DR* — Electron app summarizing WhatsApp Group chats via OpenRouter models #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/tldr-desktop", "GitHub"))
-  - *Hotel Booking* — Svelte/Express/MySQL Hotel booking platform with auth and admin flow #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/hotel-booking", "GitHub"))
-  - *Tenant Manager* — React Native app for tenant management and electricity tracking #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/tennet-manager", "GitHub"))
+  - *Victus Control* — #strong[Vala/GTK4] app to monitor, control fan speed, and power profiles for HP laptops #h(1fr) #proj-links(lnk("https://aur.archlinux.org/packages/victus-control-bin", "AUR"), lnk("https://github.com/jR4dh3y/HPOmen-linux", "GitHub"))
+  - *rsclip* — #strong[Rust/Wayland] clipboard manager with #strong[OCR] and secrets management #h(1fr) #proj-links(lnk("https://aur.archlinux.org/packages/rsclip-bin", "AUR"), lnk("https://github.com/jR4dh3y/rsclip", "GitHub"))
+  - *Dots-Niri* — one-command #strong[NiriWM] rice for Arch-based installs #h(1fr) #proj-links(lnk("https://rice.jr4.in/", "Website"), lnk("https://github.com/jR4dh3y/dots-niri", "GitHub"))
+  - *HowTo* — tutorials for practical hardware/software walkthroughs built with #strong[Astro] #h(1fr) #proj-links(lnk("https://howto.jr4.in/", "Live"), lnk("https://github.com/jR4dh3y/howTo", "GitHub"))
+  - *Pico32* — #strong[C++/PlatformIO] serial TUI for ESP32 Wi-Fi/BT pentesting #h(1fr) #proj-links(lnk("https://pico32.radhey.dev", "Website"), lnk("https://github.com/jR4dh3y/Pico32", "GitHub"))
+  - *TL;DR* — #strong[Electron] app summarizing WhatsApp Group chats via #strong[OpenRouter] models #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/tldr-desktop", "GitHub"))
+  - *Hotel Booking* — #strong[Svelte/Express/MySQL] hotel booking platform with auth and admin flow #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/hotel-booking", "GitHub"))
+  - *Tenant Manager* — #strong[React Native] app for tenant management and electricity tracking #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/tennet-manager", "GitHub"))
 ]
 
 #pagebreak()
