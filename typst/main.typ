@@ -77,6 +77,21 @@
   - Reverse-engineered undocumented HP WMI/sysfs behavior to build safe fan-profile controls that adapt to each machine's capabilities.
 ]
 
+#resume-entry(
+  title: "Open Source Contributor",
+  location: proj-links(
+    lnk("https://github.com/fairyglade/ly", "GitHub mirror"),
+    lnk("https://codeberg.org/fairyglade/ly/pulls/1031", "Codeberg PR"),
+  ),
+  date: "Jul 2026",
+  description: "ly — lightweight Linux/BSD display manager",
+)
+
+#resume-item[
+  - Proposed and implemented an optional big-clock digit outline for *ly*, improving readability over animated backgrounds while preserving the default appearance; tested with a ReleaseSafe Zig build and a live greeter configuration.
+  - Contributed to a project with *7.4K+ GitHub stars* and *350 forks* on its GitHub mirror.
+]
+
 = Projects
 
 #resume-entry(
@@ -158,7 +173,6 @@
   - *Tenant Manager* — #strong[React Native] app for tenant management and electricity tracking #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/tennet-manager", "GitHub"))
 ]
 
-#pagebreak()
 
 = Skillse
 
