@@ -80,6 +80,22 @@
 #resume-entry(
   title: "Open Source Contributor",
   location: proj-links(
+    lnk("https://github.com/junhoyeo/tokscale/pull/998", "PR #998"),
+    lnk("https://github.com/junhoyeo/tokscale/pull/1000", "PR #1000"),
+  ),
+  date: "Aug 2026",
+  description: "Tokscale — AI coding token analytics (Rust)",
+)
+
+#resume-item[
+  - Added first-class standalone *Cline CLI* and *Kimchi Coding* session ingestion across parsing, scanning, CLI/TUI filters, frontend metadata, and documentation, preserving token, cost, model, workspace, and cache data.
+  - Corrected Grok usage accounting and model attribution across parent/child agent sessions with process-generation scoping, deduplication, cache-safe behavior, and dual-source discovery; merged after passing *1,300+ core tests*.
+  - Contributed to a developer analytics project with *4.8K+ GitHub stars* and *390+ forks*.
+]
+
+#resume-entry(
+  title: "Open Source Contributor",
+  location: proj-links(
     lnk("https://github.com/fairyglade/ly", "GitHub mirror"),
     lnk("https://codeberg.org/fairyglade/ly/pulls/1031", "Codeberg PR"),
   ),
@@ -108,7 +124,7 @@
 #resume-item[
   - Made self-hosted file management practical on lightweight hardware with multi-mount browsing, chunked/resumable uploads, live job progress, media preview/streaming, and in-browser code editing, all in a ~31MB single binary.
   - Eliminated deployment friction with an embedded UI and a one-command container image for homelab and NAS setups.
-  - Reached *200+ GitHub stars* and *7K+ downloads*, confirming demand for a lighter alternative.
+  - Reached *300+ GitHub stars* and *9K+ downloads*, confirming demand for a lighter alternative.
 ]
 
 #resume-entry(
