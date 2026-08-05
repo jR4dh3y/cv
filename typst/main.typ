@@ -45,6 +45,9 @@
   colored-headers: true,
   show-footer: false,
   show-address-icon: false,
+  show-contact-icons: false,
+  show-header-rule: true,
+  show-section-rules: true,
   paper-size: "us-letter",
   font: "Source Sans 3",
   header-font: "Roboto",
@@ -59,53 +62,53 @@
   description: "Bachelor of Technology in Computer Science and Engineering",
 )
 
-= Experience
+= Open Source Experience
 
 #resume-entry(
-  title: "Open Source Contributor",
+  title: "Linux Kernel (hp-wmi) · Linux platform-driver-x86 subsystem",
   location: proj-links(
     lnk("https://lore.kernel.org/platform-driver-x86/178290542048.22449.4054894208907975949.b4-ty@b4/", "Patches"),
     lnk("https://lore.kernel.org/platform-driver-x86/20260707203740.55369-1-hello@kursatabayli.dev/", "Tested-by"),
   ),
-  date: "Mar 2026 — Jul 2026",
-  description: "Linux Kernel — platform-driver-x86 (hp-wmi)",
+  date: "",
+  description: "",
 )
 
 #resume-item[
-  - Closed a gap in Linux hardware support by getting HP Victus 15-fb0xxx fan control working on stock Linux via a patch accepted into *platform-driver-x86*.
-  - Landed a community *hp-wmi* fan-control patch upstream after validating it on real HP hardware with *Tested-by* sign-off.
+  - Closed a gap in Linux hardware support by getting HP Victus 15-fb0xxx fan control working on stock Linux via a patch accepted into platform-driver-x86.
+  - Landed a community hp-wmi fan-control patch upstream after validating it on real HP hardware with Tested-by sign-off.
   - Reverse-engineered undocumented HP WMI/sysfs behavior to build safe fan-profile controls that adapt to each machine's capabilities.
 ]
 
 #resume-entry(
-  title: "Open Source Contributor",
+  title: "Tokscale · AI coding token analytics (Rust)",
   location: proj-links(
     lnk("https://github.com/junhoyeo/tokscale/pull/998", "PR #998"),
     lnk("https://github.com/junhoyeo/tokscale/pull/1000", "PR #1000"),
   ),
-  date: "Aug 2026",
-  description: "Tokscale — AI coding token analytics (Rust)",
+  date: "",
+  description: "",
 )
 
 #resume-item[
-  - Added first-class standalone *Cline CLI* and *Kimchi Coding* session ingestion across parsing, scanning, CLI/TUI filters, frontend metadata, and documentation, preserving token, cost, model, workspace, and cache data.
-  - Corrected Grok usage accounting and model attribution across parent/child agent sessions with process-generation scoping, deduplication, cache-safe behavior, and dual-source discovery; merged after passing *1,300+ core tests*.
-  - Contributed to a developer analytics project with *4.8K+ GitHub stars* and *390+ forks*.
+  - Added first-class standalone Cline CLI and Kimchi Coding session ingestion across parsing, scanning, CLI/TUI filters, frontend metadata, and documentation, preserving token, cost, model, workspace, and cache data.
+  - Corrected Grok usage accounting and model attribution across parent/child agent sessions with process-generation scoping, deduplication, cache-safe behavior, and dual-source discovery; merged after passing 1,300+ core tests.
+  - Contributed to a developer analytics project with 4.8K+ GitHub stars and 390+ forks.
 ]
 
 #resume-entry(
-  title: "Open Source Contributor",
+  title: "ly · Lightweight Linux/BSD display manager",
   location: proj-links(
     lnk("https://github.com/fairyglade/ly", "GitHub mirror"),
     lnk("https://codeberg.org/fairyglade/ly/pulls/1031", "Codeberg PR"),
   ),
-  date: "Jul 2026",
-  description: "ly — lightweight Linux/BSD display manager",
+  date: "",
+  description: "",
 )
 
 #resume-item[
-  - Proposed and implemented an optional big-clock digit outline for *ly*, improving readability over animated backgrounds while preserving the default appearance; tested with a ReleaseSafe Zig build and a live greeter configuration.
-  - Contributed to a project with *7.4K+ GitHub stars* and *350 forks* on its GitHub mirror.
+  - Proposed and implemented an optional big-clock digit outline for ly, improving readability over animated backgrounds while preserving the default appearance; tested with a ReleaseSafe Zig build and a live greeter configuration.
+  - Contributed to a project with 7.4K+ GitHub stars and 350 forks on its GitHub mirror.
 ]
 
 = Projects
@@ -124,7 +127,7 @@
 #resume-item[
   - Made self-hosted file management practical on lightweight hardware with multi-mount browsing, chunked/resumable uploads, live job progress, media preview/streaming, and in-browser code editing, all in a ~31MB single binary.
   - Eliminated deployment friction with an embedded UI and a one-command container image for homelab and NAS setups.
-  - Reached *300+ GitHub stars* and *9K+ downloads*, confirming demand for a lighter alternative.
+  - Reached 300+ GitHub stars and 9K+ downloads, confirming demand for a lighter alternative.
 ]
 
 #resume-entry(
@@ -141,7 +144,7 @@
 #resume-item[
   - Led a team of 5 contributors to design and build a single-node object store, coordinating API, storage, dashboard, and deployment work across a single-binary and containerized release.
   - Matched MinIO's core API (SigV4 + bearer auth, multipart uploads, management API) at 12–14× less memory using zero-copy sendfile() egress instead of distributed-cluster overhead.
-  - Grew to *50+ GitHub stars*, proving lightweight object storage can compete without sacrificing performance or compatibility.
+  - Grew to 50+ GitHub stars, proving lightweight object storage can compete without sacrificing performance or compatibility.
 ]
 
 #resume-entry(
@@ -179,18 +182,18 @@
 )
 
 #resume-item[
-  - *Victus Control* — #strong[Vala/GTK4] app to monitor, control fan speed, and power profiles for HP laptops #h(1fr) #proj-links(lnk("https://aur.archlinux.org/packages/victus-control-bin", "AUR"), lnk("https://github.com/jR4dh3y/HPOmen-linux", "GitHub"))
-  - *rsclip* — #strong[Rust/Wayland] clipboard manager with #strong[OCR] and secrets management #h(1fr) #proj-links(lnk("https://aur.archlinux.org/packages/rsclip-bin", "AUR"), lnk("https://github.com/jR4dh3y/rsclip", "GitHub"))
-  - *Dots-Niri* — one-command #strong[NiriWM] rice for Arch-based installs #h(1fr) #proj-links(lnk("https://rice.jr4.in/", "Website"), lnk("https://github.com/jR4dh3y/dots-niri", "GitHub"))
-  - *HowTo* — tutorials for practical hardware/software walkthroughs built with #strong[Astro] #h(1fr) #proj-links(lnk("https://howto.jr4.in/", "Live"), lnk("https://github.com/jR4dh3y/howTo", "GitHub"))
-  - *Pico32* — #strong[C++/PlatformIO] serial TUI for ESP32 Wi-Fi/BT pentesting #h(1fr) #proj-links(lnk("https://pico32.radhey.dev", "Website"), lnk("https://github.com/jR4dh3y/Pico32", "GitHub"))
-  - *TL;DR* — #strong[Electron] app summarizing WhatsApp Group chats via #strong[OpenRouter] models #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/tldr-desktop", "GitHub"))
-  - *Hotel Booking* — #strong[Svelte/Express/MySQL] hotel booking platform with auth and admin flow #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/hotel-booking", "GitHub"))
-  - *Tenant Manager* — #strong[React Native] app for tenant management and electricity tracking #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/tennet-manager", "GitHub"))
+  - Victus Control — Vala/GTK4 app to monitor, control fan speed, and power profiles for HP laptops #h(1fr) #proj-links(lnk("https://aur.archlinux.org/packages/victus-control-bin", "AUR"), lnk("https://github.com/jR4dh3y/HPOmen-linux", "GitHub"))
+  - rsclip — Rust/Wayland clipboard manager with OCR and secrets management #h(1fr) #proj-links(lnk("https://aur.archlinux.org/packages/rsclip-bin", "AUR"), lnk("https://github.com/jR4dh3y/rsclip", "GitHub"))
+  - Dots-Niri — one-command NiriWM rice for Arch-based installs #h(1fr) #proj-links(lnk("https://rice.jr4.in/", "Website"), lnk("https://github.com/jR4dh3y/dots-niri", "GitHub"))
+  - HowTo — tutorials for practical hardware/software walkthroughs built with Astro #h(1fr) #proj-links(lnk("https://howto.jr4.in/", "Live"), lnk("https://github.com/jR4dh3y/howTo", "GitHub"))
+  - Pico32 — C++/PlatformIO serial TUI for ESP32 Wi-Fi/BT pentesting #h(1fr) #proj-links(lnk("https://pico32.radhey.dev", "Website"), lnk("https://github.com/jR4dh3y/Pico32", "GitHub"))
+  - TL;DR — Electron app summarizing WhatsApp Group chats via OpenRouter models #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/tldr-desktop", "GitHub"))
+  - Hotel Booking — Svelte/Express/MySQL hotel booking platform with auth and admin flow #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/hotel-booking", "GitHub"))
+  - Tenant Manager — React Native app for tenant management and electricity tracking #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/tennet-manager", "GitHub"))
 ]
 
 
-= Skillse
+= Skills
 
 #resume-skill-item(
   "Languages",
@@ -251,7 +254,7 @@
 )
 #block(below: 0.65em)
 
-= Achievements
+= Positions of Responsibility
 
 #resume-entry(
   title: "Cloud & DevOps Lead",
@@ -261,9 +264,11 @@
 )
 
 #resume-item[
-  - Lead cloud and DevOps initiatives across *Google Developer Groups on Campus* and *AWS Cloud Club* through workshops, technical sessions, and collaborative projects on GCP, AWS, containerization, and infrastructure automation.
-  - Ran Google Cloud sessions for *100+ students* and built a tutorial platform with *20+* lab walkthroughs, notes, and videos for Google Cloud Study Jam · #proj-links(lnk("https://gcp-tutorial.vercel.app/", "Live"), lnk("https://github.com/gdgoc-miet/gcp-tutorial-ui", "GitHub"))
+  - Lead cloud and DevOps initiatives across Google Developer Groups on Campus and AWS Cloud Club through workshops, technical sessions, and collaborative projects on GCP, AWS, containerization, and infrastructure automation.
+  - Ran Google Cloud sessions for 100+ students and built a tutorial platform with 20+ lab walkthroughs, notes, and videos for Google Cloud Study Jam · #proj-links(lnk("https://gcp-tutorial.vercel.app/", "Live"), lnk("https://github.com/gdgoc-miet/gcp-tutorial-ui", "GitHub"))
 ]
+
+= Achievements
 
 #resume-entry(
   title: "IDE Bootcamp Edition 3 — Team Leader, 2nd Place",
@@ -273,7 +278,7 @@
 )
 
 #resume-item[
-  - Led a team to *2nd Place* building an AI-powered SaaS product for automated presentation generation from user-uploaded templates and documents with lower cost and no hallucinations.
+  - Led a team to 2nd Place building an AI-powered SaaS product for automated presentation generation from user-uploaded templates and documents with lower cost and no hallucinations.
 ]
 
 #resume-entry(
@@ -295,7 +300,7 @@
 )
 
 #resume-item[
-  - Led multidisciplinary teams to the *top 9 in college* both years through collaborative problem-solving and rapid prototyping.
+  - Led multidisciplinary teams to the top 9 in college both years through collaborative problem-solving and rapid prototyping.
 ]
 
 = Certifications & Programs

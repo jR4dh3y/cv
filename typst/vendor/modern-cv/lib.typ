@@ -192,6 +192,9 @@
 /// - language (string): The language of the resume, defaults to "en". See lang.toml for available languages
 /// - use-smallcaps (boolean): Whether to use small caps formatting throughout the template
 /// - show-address-icon (boolean): Whether to show the address icon
+/// - show-contact-icons (boolean): Whether to show icons beside contact details
+/// - show-header-rule (boolean): Whether to draw the decorative rule below the name
+/// - show-section-rules (boolean): Whether to draw rules after top-level section headings
 /// - description (str | none): The PDF description
 /// - keywords (array | str): The PDF keywords
 /// - body (content): The body of the resume
@@ -209,6 +212,9 @@
   paper-size: "a4",
   use-smallcaps: true,
   show-address-icon: false,
+  show-contact-icons: true,
+  show-header-rule: true,
+  show-section-rules: true,
   description: none,
   keywords: (),
   body,
@@ -276,12 +282,16 @@
     } else {
       color-darkgray
     }
-    #text[#strong[#text(color)[#it.body]]]
-    #box(width: 1fr, line(length: 100%))
+    #text(weight: "medium")[#text(color)[#it.body]]
+    #if show-section-rules {
+      box(width: 1fr, line(length: 100%))
+    } else {
+      v(0.35em, weak: true)
+    }
   ]
 
   show heading.where(level: 2): it => {
-    set text(color-darkgray, size: 12pt, style: "normal", weight: "bold")
+    set text(color-darkgray, size: 12pt, style: "normal", weight: "medium")
     it.body
   }
 
@@ -310,16 +320,20 @@
     s
   }
 
-  // One contact row: icon + label
+  // One contact row, optionally prefixed with an icon.
   let contact-row(icon, body) = {
     set text(size: 9pt, weight: "regular", fill: color-darkgray)
-    grid(
-      columns: (11pt, auto),
-      column-gutter: 5pt,
-      align: (center + horizon, right + horizon),
-      contact-icon(icon),
-      body,
-    )
+    if show-contact-icons {
+      grid(
+        columns: (11pt, auto),
+        column-gutter: 5pt,
+        align: (center + horizon, right + horizon),
+        contact-icon(icon),
+        body,
+      )
+    } else {
+      align(right + horizon, body)
+    }
   }
 
   let name = {
@@ -359,18 +373,6 @@
       link("mailto:" + author.email)[#author.email],
     ))
   }
-  if ("homepage" in author) {
-    contact-rows.push(contact-row(
-      "globe",
-      link(author.homepage)[#display-url(author.homepage)],
-    ))
-  }
-  if ("github" in author) {
-    contact-rows.push(contact-row(
-      "github",
-      link("https://github.com/" + author.github)[#author.github],
-    ))
-  }
   if ("gitlab" in author) {
     contact-rows.push(contact-row(
       "gitlab",
@@ -386,7 +388,19 @@
   if ("linkedin" in author) {
     contact-rows.push(contact-row(
       "linkedin",
-      link("https://www.linkedin.com/in/" + author.linkedin)[#author.linkedin],
+      link("https://www.linkedin.com/in/" + author.linkedin)[#display-url("https://linkedin.com/in/" + author.linkedin)],
+    ))
+  }
+  if ("github" in author) {
+    contact-rows.push(contact-row(
+      "github",
+      link("https://github.com/" + author.github)[#display-url("https://github.com/" + author.github)],
+    ))
+  }
+  if ("homepage" in author) {
+    contact-rows.push(contact-row(
+      "globe",
+      link(author.homepage)[#display-url(author.homepage)],
     ))
   }
   if ("twitter" in author) {
@@ -452,15 +466,16 @@
       align: (left + top, right + top),
       {
         name
-        v(7pt, weak: true)
-        // Accent rule under the name, ending at the links column
-        grid(
-          columns: (28pt, 1fr),
-          column-gutter: 0pt,
-          align: horizon,
-          line(length: 100%, stroke: 2pt + accent-color),
-          line(length: 100%, stroke: 0.6pt + accent-color.lighten(55%)),
-        )
+        if show-header-rule {
+          v(7pt, weak: true)
+          grid(
+            columns: (28pt, 1fr),
+            column-gutter: 0pt,
+            align: horizon,
+            line(length: 100%, stroke: 2pt + accent-color),
+            line(length: 100%, stroke: 0.6pt + accent-color.lighten(55%)),
+          )
+        }
         if ("summary" in author) {
           v(7pt, weak: true)
           summary
