@@ -65,26 +65,28 @@
 = Open Source Experience
 
 #resume-entry(
-  title: "Linux Kernel (hp-wmi) · Linux platform-driver-x86 subsystem",
+  title: "Linux Kernel (hp-wmi) · Platform-driver-x86 subsystem",
   location: proj-links(
-    lnk("https://lore.kernel.org/platform-driver-x86/178290542048.22449.4054894208907975949.b4-ty@b4/", "Patches"),
-    lnk("https://lore.kernel.org/platform-driver-x86/20260707203740.55369-1-hello@kursatabayli.dev/", "Tested-by"),
+    lnk("https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=385bf4f87b059d9a2bd9663c7a5f1a8fec6f724e", "385bf4f"),
+    lnk("https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=9ed0f2562f9a6060955954f0d0ca72f12ed1a705", "9ed0f25"),
+    lnk("https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=5417f92a1d460bf10e3f316863ba059cc7c845eb", "5417f92"),
+    lnk("https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b461a88f2ee8c4ce735699159b6f423cf7648fab", "b461a88"),
   ),
   date: "",
   description: "",
 )
 
 #resume-item[
-  - Closed a gap in Linux hardware support by getting HP Victus 15-fb0xxx fan control working on stock Linux via a patch accepted into platform-driver-x86.
-  - Landed a community hp-wmi fan-control patch upstream after validating it on real HP hardware with Tested-by sign-off.
-  - Reverse-engineered undocumented HP WMI/sysfs behavior to build safe fan-profile controls that adapt to each machine's capabilities.
+  - Added HP Victus 15-fb0xxx (board 8A3D) fan-control support to the upstream Linux hp-wmi driver by reusing its existing Victus WMI control path.
+  - Refactored hp-wmi to select thermal-profile and fan-control features from board-specific data instead of hardcoded model checks.
+  - Tested dual-channel PWM fan control on an HP Victus 16-s0xxx and provided the Tested-by sign-off for the upstream commit.
 ]
 
 #resume-entry(
-  title: "Tokscale · AI coding token analytics (Rust)",
+  title: "Tokscale · AI coding token analytics",
   location: proj-links(
-    lnk("https://github.com/junhoyeo/tokscale/pull/998", "PR #998"),
-    lnk("https://github.com/junhoyeo/tokscale/pull/1000", "PR #1000"),
+    lnk("https://github.com/junhoyeo/tokscale/commit/bcd4c2203f69ee16bba7f6ea40aa2a8b11281c9d", "bcd4c22 (PR #998)"),
+    lnk("https://github.com/junhoyeo/tokscale/commit/ab9f2269d646ad702e43e9fb32f02a57b6fe81f1", "ab9f226 (PR #1000)"),
   ),
   date: "",
   description: "",
@@ -99,8 +101,8 @@
 #resume-entry(
   title: "ly · Lightweight Linux/BSD display manager",
   location: proj-links(
-    lnk("https://github.com/fairyglade/ly", "GitHub mirror"),
-    lnk("https://codeberg.org/fairyglade/ly/pulls/1031", "Codeberg PR"),
+    lnk("https://github.com/fairyglade/ly/commit/bd28c0e679e71bb1e7507a28191a4fa0db80db2d", "GitHub commit"),
+    lnk("https://codeberg.org/fairyglade/ly/commit/bd28c0e679e71bb1e7507a28191a4fa0db80db2d", "Codeberg commit"),
   ),
   date: "",
   description: "",
@@ -118,7 +120,7 @@
   location: proj-links(
     lnk("https://boxbox.radhey.dev/", "Website"),
     lnk("https://github.com/jR4dh3y/BoxBox", "GitHub"),
-    lnk("https://docker.radhey.dev/r/boxbox", "Docker"),
+    lnk("https://github.com/jR4dh3y/BoxBox/pkgs/container/boxbox", "Docker"),
   ),
   date: "Nov 2025 — Present",
   description: "Self-hosted file management",
