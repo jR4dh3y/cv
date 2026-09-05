@@ -114,6 +114,8 @@
     \vspace{-1pt}
 }
 
+\newcommand{\resumeEntryTitle}[2]{#1\ $\cdot$\ #2}
+
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \newcommand{\resumeCompactProject}[3]{%
@@ -146,7 +148,7 @@
 		\textcolor{accent}{\faIcon{linkedin}}\hspace{0.25em}linkedin.com/in/radheykalra\contactSep
 		\textcolor{accent}{\faIcon{github}}\hspace{0.25em}github.com/jr4dh3y
 	} \\[3pt]
-	{\small\color{muted} Open source contributor and full-stack developer working across ML/audio systems, Linux tooling, and self-hosted infrastructure.}
+	\small Full-stack developer and open source contributor focused on Linux systems programming, self-hosted infrastructure, and Audio/ML pipelines.
 \end{minipage}%
 \vspace{-1pt}
 
@@ -155,7 +157,7 @@
 \section{Education}
 \resumeSubHeadingListStart
 \resumeSubheading
-{Bachelor of Technology in CSE}{Aug. 2023 -- May 2027}
+{Bachelor of Technology in Computer Science and Engineering}{Aug. 2023 -- May 2027}
 {Model Institute of Engineering and Technology}{Jammu and Kashmir, India}
 {}
 \resumeSubheading
@@ -164,26 +166,52 @@
 {}
 \resumeSubHeadingListEnd
 
+%-----------OPEN SOURCE EXPERIENCE-----------
+\section{Open Source Experience}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Linux Kernel (hp-wmi) $\cdot$ Platform-driver-x86 subsystem}{}{}{}{}
+\resumeItemListStart
+\resumeItem{Added HP Victus 15-fb0xxx (board 8A3D) fan-control support to the upstream Linux hp-wmi driver by reusing its existing Victus WMI control path.}
+\resumeItem{Refactored hp-wmi to select thermal-profile and fan-control features from board-specific data instead of hardcoded model checks.}
+\resumeItem{Tested dual-channel PWM fan control on an HP Victus 16-s0xxx and provided the Tested-by sign-off for the upstream commit.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Tokscale $\cdot$ AI coding token analytics}{}{}{}{}
+\resumeItemListStart
+\resumeItem{Added first-class standalone Cline CLI and Kimchi Coding session ingestion across parsing, scanning, CLI/TUI filters, frontend metadata, and documentation, preserving token, cost, model, workspace, and cache data.}
+\resumeItem{Corrected Grok usage accounting and model attribution across parent/child agent sessions with process-generation scoping, deduplication, cache-safe behavior, and dual-source discovery; merged after passing 1,300+ core tests.}
+\resumeItem{Contributed to a developer analytics project with 4.8K+ GitHub stars and 390+ forks.}
+\resumeItemListEnd
+
+\resumeSubheading
+{ly $\cdot$ Lightweight Linux/BSD display manager}{}{}{}{}
+\resumeItemListStart
+\resumeItem{Proposed and implemented an optional big-clock digit outline for ly, improving readability over animated backgrounds while preserving the default appearance; tested with a ReleaseSafe Zig build and a live greeter configuration.}
+\resumeItem{Contributed to a project with 7.4K+ GitHub stars and 350 forks on its GitHub mirror.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
 %-----------PROJECTS-----------
 \section{Projects}
 \resumeSubHeadingListStart
 \resumeProjectHeading
 {BoxBox}
-{\emph{Self-hosted file management system for Linux servers}}
+{\emph{Self-hosted file management}}
 {Nov. 2025 -- Present}
 \resumeItemListStart
-\resumeItem{Built a lightweight self-hosted file manager in \textbf{Go + Svelte} for multi-mount browsing, chunked/resumable uploads, live job progress, media preview/streaming, and in-browser editing via \textbf{Monaco}.}
-\resumeItem{Ships as a \textbf{31MB single binary} with the UI embedded, plus a published Docker image (\texttt{latest}) for one-command homelab/NAS deploys.}
-\resumeItem{Grew the project to \textbf{200+ GitHub stars} and \textbf{5K+ downloads}.}
+\resumeItem{Made self-hosted file management practical on lightweight hardware with multi-mount browsing, chunked/resumable uploads, live job progress, media preview/streaming, and in-browser code editing, all in a ~31MB single binary.}
+\resumeItem{Eliminated deployment friction with an embedded UI and a one-command container image for homelab and NAS setups.}
+\resumeItem{Reached 300+ GitHub stars and 13K+ downloads, confirming demand for a lighter alternative.}
 \resumeItemListEnd
 
 \resumeProjectHeading
 {U-Net Audio Filter}
-{\emph{Audio enhancement by removing background noise}}
+{\emph{Audio enhancement / background noise removal}}
 {Jul. 2025 -- Present}
 \resumeItemListStart
-\resumeItem{Building an audio enhancement system with a \textbf{custom U-Net-inspired architecture} and end-to-end audio denoising pipeline.}
-\resumeItem{Implemented \textbf{Python/PyTorch + audio DSP} preprocessing, spectrogram modeling, and evaluation tooling, with early results showing minor gains over open-source baselines.}
+\resumeItem{Improving audio denoising quality beyond existing open-source baselines with a custom U-Net architecture and an audio preprocessing pipeline.}
 \resumeItemListEnd
 \resumeProjectHeading
 {HPOmen Linux (Victus Control)}
@@ -196,69 +224,66 @@
 \resumeItemListEnd
 \resumeProjectHeading
 {Fast Blob Storage (FBS)}
-{\emph{Self-hosted S3-compatible object storage for single-node / homelab deploys}}
-{Apr. 2026 -- May 2026}
+{\emph{S3-compatible object storage}}
+{Apr. 2026 -- Present}
 \resumeItemListStart
-\resumeItem{Built a single-node \textbf{S3-compatible} object store in \textbf{Go} (filesystem blobs + \textbf{SQLite} metadata) with a \textbf{SvelteKit} dashboard, shipped as a single binary and Docker image (\texttt{latest}).}
-\resumeItem{Features dual auth (\textbf{SigV4} + bearer), multipart uploads, a management API, and zero-copy Linux \texttt{sendfile()} egress for fast local downloads without distributed-storage overhead.}
-\resumeItem{Benchmarks: \textbf{\textasciitilde15MB} binary, \textbf{\textasciitilde14--16MB} idle RSS, up to \textbf{\textasciitilde1.3 GB/s} downloads / \textbf{\textasciitilde3.8 GB/s} concurrent aggregate---about \textbf{12--14$\times$} less memory than MinIO; \textbf{50+ GitHub stars}.}
+\resumeItem{Led a team of 5 contributors to design and build a single-node object store, coordinating API, storage, dashboard, and deployment work across a single-binary and containerized release.}
+\resumeItem{Matched MinIO's core API (SigV4 + bearer auth, multipart uploads, management API) at 12--14$\times$ less memory using zero-copy \texttt{sendfile()} egress instead of distributed-cluster overhead.}
+\resumeItem{Grew to 50+ GitHub stars, proving lightweight object storage can compete without sacrificing performance or compatibility.}
 \resumeItemListEnd
 \resumeProjectHeading
 {Additional Projects}{}{ }
 \begin{itemize}[leftmargin=0.18in, itemsep=1.5pt, topsep=2pt, parsep=0pt]
-	\item\small{\textbf{QckPages}: SvelteKit/Convex app for publishing HTML pages, FBS-backed storage.}
-	\item\small{\textbf{rsclip}: Rust Wayland clipboard manager with a low-memory daemon, GTK4 UI, SQLite history, search, filters, OCR Support and Secrets management.}
-	\item\small{\textbf{Dots-Niri}: Replicates my NiriWM rice on Arch-based install with a single \texttt{curl} command.}
-	\item\small{\textbf{HowTo}: Astro tutorials site for practical hardware and software walkthroughs.}
-	\item\small{\textbf{Pico32}: C++/PlatformIO serial TUI built for ESP32 Wi-Fi and Bluetooth pentesting workflows.}
-	\item\small{\textbf{TL;DR}: Electron app that summarizes WhatsApp chats with OpenRouter compatible AI models.}
-	\item\small{\textbf{Hotel Booking}: Svelte/Express/MySQL booking platform with authentication and admin workflows.}
-	\item\small{\textbf{Tenant Manager}: React Native app for managing tenants and tracking electricity usage.}
+	\item\small{\textbf{QckPages}: End-to-end HTML page publishing platform.}
+	\item\small{\textbf{rsclip}: Rust/Wayland clipboard manager with OCR and secrets management.}
+	\item\small{\textbf{Dots-Niri}: One-command NiriWM rice for Arch-based installs.}
+	\item\small{\textbf{HowTo}: Tutorials for practical hardware/software walkthroughs built with Astro.}
+	\item\small{\textbf{Pico32}: C++/PlatformIO serial TUI for ESP32 Wi-Fi/BT pentesting.}
+	\item\small{\textbf{TL;DR}: Electron app summarizing WhatsApp Group chats via OpenRouter models.}
+	\item\small{\textbf{Hotel Booking}: Svelte/Express/MySQL hotel booking platform with auth and admin flow.}
+	\item\small{\textbf{Tenant Manager}: React Native app for tenant management and electricity tracking.}
 \end{itemize}\vspace{-1pt}
 
 \resumeSubHeadingListEnd
 
-%-----------CO-CURRICULAR ACTIVITIES-----------
-\section{Co-curricular Activities}
+%-----------POSITIONS OF RESPONSIBILITY-----------
+\section{Positions of Responsibility}
 \resumeSubHeadingListStart
 \resumeSubheading
-{Cloud Lead}{Aug. 2025 -- Present}
-{GDGoC (Google Developer Groups on Campus), MIET Jammu}{Jammu and Kashmir, India}
+{Cloud \& DevOps Lead}{Aug. 2025 -- Present}
+{Google Developer Groups on Campus \& AWS Cloud Club}{MIET, Jammu}
 {}
 \resumeItemListStart
-\resumeItem{Led cloud learning initiatives through hands-on \textbf{Google Cloud} workshops and guided sessions for \textbf{100+ students}, and built a tutorial platform with \textbf{20+} lab walkthroughs, notes, and video resources to support \textbf{Google Cloud Study Jam} completion.}
+\resumeItem{Lead cloud and DevOps initiatives across Google Developer Groups on Campus and AWS Cloud Club through workshops, technical sessions, and collaborative projects on GCP, AWS, containerization, and infrastructure automation.}
+\resumeItem{Ran Google Cloud sessions for 100+ students and built a tutorial platform with 20+ lab walkthroughs, notes, and videos for Google Cloud Study Jam.}
 \resumeItemListEnd
+\resumeSubHeadingListEnd\vspace{1pt}
 
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+\resumeSubHeadingListStart
 \resumeSubheading
-{Cloud and DevOps Lead}{Jan. 2026 -- Present}
-{AWS Cloud Club MIET Jammu}{Jammu and Kashmir, India}
-{}
-\resumeItemListStart
-\resumeItem{Lead cloud and DevOps initiatives through hands-on workshops, technical sessions, and collaborative projects, driving adoption of \textbf{AWS}, containerization, and infrastructure best practices focused on deployment automation and scalability.}
-\resumeItemListEnd
-
-\resumeSubheading
-{IDE Bootcamp Edition 3 Team Leader -- 2nd Place}{Apr. 2026}
+{IDE Bootcamp Edition 3 -- Team Leader, 2nd Place}{Apr. 2026}
 {Innovation, Design, and Entrepreneurship (IDE) Bootcamp}{GNDEC, Ludhiana, Punjab}
 {}
 \resumeItemListStart
-\resumeItem{Led a team to secure \textbf{2nd Place} at the AICTE/MoE Innovation Cell bootcamp by applying rapid prototyping and business modeling to develop an AI-powered B2B SaaS product for automated presentation generation from user-uploaded templates and documents.}
+\resumeItem{Led a team to 2nd Place building an AI-powered SaaS product for automated presentation generation from user-uploaded templates and documents with lower cost and no hallucinations.}
 \resumeItemListEnd
 
 \resumeSubheading
-{IDE Bootcamp Edition 2 Team Leader}{Feb. 2025}
+{IDE Bootcamp Edition 2 -- Team Leader}{Feb. 2025}
 {Innovation, Design, and Entrepreneurship (IDE) Bootcamp}{IIT Jammu}
 {}
 \resumeItemListStart
-\resumeItem{Participated in a 5-day immersive bootcamp at IIT Jammu with Wadhwani Foundation, AICTE, and MoE's Innovation Cell, gaining business modeling, product design, and entrepreneurship experience while leading a team to develop a ``Sports Match Finder'' app using design thinking and the Lean Canvas model.}
+\resumeItem{Led a team in using design thinking and Lean Canvas to develop a sports matchmaking and social networking app.}
 \resumeItemListEnd
 
 \resumeSubheading
-{Hackathon Team Leader}{}
-{Internal Hackathon \& Smart India Hackathon (SIH 2024 \& 2025)}{MIET, Jammu}
+{\textbf{Hackathon Team Leader}}{}
+{Internal Hackathons \& Smart India Hackathon}{MIET, Jammu}
 {}
 \resumeItemListStart
-\resumeItem{Led multidisciplinary teams in MIET's internal hackathon and Smart India Hackathon selection rounds in \textbf{2024} and \textbf{2025}, reaching the \textbf{top 9 teams in the college} both years through collaborative problem-solving, rapid prototyping, and real-world solution design.}
+\resumeItem{Led multidisciplinary teams to the top 9 in college both years through collaborative problem-solving and rapid prototyping.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd\vspace{1pt}
 
@@ -266,11 +291,11 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
 	\small{\item{
-	      \textbf{Languages}{: Python, C/C++, TypeScript, Go, Rust, SQL, Bash, PowerShell, QML, Vala} \\
+	      \textbf{Languages}{: Python, JavaScript/TypeScript, Go, C/C++, Rust, SQL, Bash, PowerShell, Vala} \\
 	      \textbf{Frameworks \& Platforms}{: SvelteKit, React, Astro, Tailwind CSS, React Native, Bun} \\
 	      \textbf{Developer Tools}{: Git, Docker, CI/CD, Cloudflare, Vercel, Kubernetes, Terraform} \\
 	      \textbf{Databases \& Cloud}{: Convex, PostgreSQL, MySQL, AWS, GCP} \\
-	      \textbf{Domains}{: Audio Processing, Linux Servers, Full-Stack Development}
+	      \textbf{Domains}{: Full-Stack Development, Linux Servers, Self-Hosting, Networking, Audio Processing}
 	      }}
 \end{itemize}\vspace{-7pt}
 
@@ -279,13 +304,13 @@
 \section{Certificates}
  {\footnotesize
   \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.48\textwidth}@{\hspace{0.04\textwidth}}>{\raggedright\arraybackslash}p{0.48\textwidth}@{}}
-	  \textbf{Cybersecurity}                          &
-	  \textbf{AI}                                       \\
-	  \textbf{Coursera}: Google Cybersecurity; Cisco Cybersecurity Operations; EC-Council Cybersecurity Attack and Defense Fundamentals; Palo Alto Networks Cybersecurity.\par
-	  \textbf{NPTEL}: Ethical Hacking (IIT Kharagpur) &
-	  \textbf{NPTEL}: Deep Learning (IIT Ropar); Artificial Intelligence for Management.\par
-	  \textbf{IBM SkillsBuild}: AI Agent Architect.\par
-	  \textbf{Coursera}: ServiceNow AI-Powered Workflows
+	\textbf{Cybersecurity}                          &
+	\textbf{Programs}                                  \\
+	\textbf{Coursera}: Google Cybersecurity; Cisco Cybersecurity Operations Fundamentals; Palo Alto Networks Cybersecurity; EC-Council Cybersecurity Attack and Defense Fundamentals.\par
+	\textbf{NPTEL}: Ethical Hacking (IIT Kharagpur) &
+	\textbf{NPTEL}: Deep Learning (IIT Ropar).\par
+	\textbf{IBM SkillsBuild}: AI Agent Architect.\par
+	\textbf{IDE Bootcamp}: AICTE / MoE
   \end{tabularx}
  }\vspace{-4pt}
 
