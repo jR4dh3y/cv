@@ -8,13 +8,6 @@
 // All links underlined so they don't look like plain text
 #show link: underline
 
-// Compact right-side project links (GitHub / Live / AUR)
-#let proj-links(..items) = {
-  set text(size: 9.5pt, weight: "regular")
-  items.pos().join([ · ])
-}
-
-#let lnk(url, label) = link(url)[#label]
 
 // Keep the primary name bold while treating the suffix and stack as metadata.
 #let entry-title(name, detail, separator: "·") = [
@@ -42,7 +35,7 @@
     ),
   ),
   keywords: ("Open Source", "Full-Stack", "Linux", "ML"),
-  description: "Resume of Radhey Kalra — open source contributor and full-stack developer",
+  description: "Resume of Radhey Kalra - open source contributor and full-stack developer",
   profile-picture: none,
   date: datetime.today().display(),
   language: "en",
@@ -62,7 +55,7 @@
 #resume-entry(
   title: "Model Institute of Engineering and Technology",
   location: "Jammu and Kashmir, India",
-  date: "Aug 2023 — May 2027",
+  date: "Aug 2023 - May 2027",
   description: "Bachelor of Technology in Computer Science and Engineering",
 )
 
@@ -70,12 +63,7 @@
 
 #resume-entry(
   title: entry-title("Linux Kernel (hp-wmi)", "Platform-driver-x86 subsystem"),
-  location: proj-links(
-    lnk("https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=08ecf6d131f38595a1e7f5441c8e1d29302cc718", "08ecf6d"),
-    lnk("https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=0687673b1aa02fe10d2f0c627564843728f0b7e6", "0687673"),
-    lnk("https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=dcabd63cd12c119dc6bbc5c22bfa411021fd9a5b", "dcabd63"),
-    lnk("https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b461a88f2ee8c4ce735699159b6f423cf7648fab", "b461a88"),
-  ),
+
   date: "",
   description: "",
 )
@@ -88,10 +76,7 @@
 
 #resume-entry(
   title: entry-title("Tokscale", "AI coding token analytics"),
-  location: proj-links(
-    lnk("https://github.com/junhoyeo/tokscale/commit/bcd4c2203f69ee16bba7f6ea40aa2a8b11281c9d", "bcd4c22 (PR #998)"),
-    lnk("https://github.com/junhoyeo/tokscale/commit/ab9f2269d646ad702e43e9fb32f02a57b6fe81f1", "ab9f226 (PR #1000)"),
-  ),
+
   date: "",
   description: "",
 )
@@ -104,10 +89,7 @@
 
 #resume-entry(
   title: entry-title("ly", "Lightweight Linux/BSD display manager"),
-  location: proj-links(
-    lnk("https://github.com/fairyglade/ly/commit/bd28c0e679e71bb1e7507a28191a4fa0db80db2d", "GitHub commit"),
-    lnk("https://codeberg.org/fairyglade/ly/commit/bd28c0e679e71bb1e7507a28191a4fa0db80db2d", "Codeberg commit"),
-  ),
+
   date: "",
   description: "",
 )
@@ -121,12 +103,8 @@
 
 #resume-entry(
   title: project-title("BoxBox", "Go, TS, SvelteKit, Docker"),
-  location: proj-links(
-    lnk("https://boxbox.radhey.dev/", "Website"),
-    lnk("https://github.com/jR4dh3y/BoxBox", "GitHub"),
-    lnk("https://github.com/jR4dh3y/BoxBox/pkgs/container/boxbox", "Docker"),
-  ),
-  date: "Nov 2025 — Present",
+
+  date: "Nov 2025 - Present",
   description: "Self-hosted file management",
 )
 
@@ -138,12 +116,8 @@
 
 #resume-entry(
   title: project-title("Fast Blob Storage (FBS)", "Go, S3, Docker, SQLite"),
-  location: proj-links(
-    lnk("https://fbs-landing.vercel.app/", "Website"),
-    lnk("https://github.com/i-got-this-faa/fbs-core", "GitHub"),
-    lnk("https://github.com/i-got-this-faa/fbs-core/pkgs/container/fbs-core", "Docker"),
-  ),
-  date: "Apr 2026 — Present",
+
+  date: "Apr 2026 - Present",
   description: "S3-compatible object storage",
 )
 
@@ -155,10 +129,8 @@
 
 #resume-entry(
   title: project-title("U-Net Audio Filter", "Python, PyTorch, CUDA"),
-  location: proj-links(
-    lnk("https://github.com/jR4dh3y/unet-audiofilter", "GitHub (private)"),
-  ),
-  date: "Jul 2025 — Present",
+
+  date: "Jul 2025 - Present",
   description: "Audio enhancement / background noise removal",
 )
 
@@ -168,10 +140,7 @@
 
 #resume-entry(
   title: project-title("QckPages", "SvelteKit, Convex, Razorpay, FBS"),
-  location: proj-links(
-    lnk("https://qckpage.jr4.in/", "Live"),
-    lnk("https://github.com/jR4dh3y/qckpages", "GitHub"),
-  ),
+
   date: "May 2026",
   description: "End-to-end HTML page publishing platform",
 )
@@ -181,23 +150,27 @@
   - Full self-serve product flow from signup and plan checkout to one-click publish and hosted page delivery.
 ]
 
-#resume-entry(
-  title: "Additional Projects",
-  location: "",
-  date: "",
-)
 
-#resume-item[
-  - Victus Control — Vala/GTK4 app to monitor, control fan speed, and power profiles for HP laptops #h(1fr) #proj-links(lnk("https://aur.archlinux.org/packages/victus-control-bin", "AUR"), lnk("https://github.com/jR4dh3y/HPOmen-linux", "GitHub"))
-  - rsclip — Rust/Wayland clipboard manager with OCR and secrets management #h(1fr) #proj-links(lnk("https://aur.archlinux.org/packages/rsclip-bin", "AUR"), lnk("https://github.com/jR4dh3y/rsclip", "GitHub"))
-  - Dots-Niri — one-command NiriWM rice for Arch-based installs #h(1fr) #proj-links(lnk("https://rice.jr4.in/", "Website"), lnk("https://github.com/jR4dh3y/dots-niri", "GitHub"))
-  - HowTo — tutorials for practical hardware/software walkthroughs built with Astro #h(1fr) #proj-links(lnk("https://howto.jr4.in/", "Live"), lnk("https://github.com/jR4dh3y/howTo", "GitHub"))
-  - Pico32 — C++/PlatformIO serial TUI for ESP32 Wi-Fi/BT pentesting #h(1fr) #proj-links(lnk("https://pico32.radhey.dev", "Website"), lnk("https://github.com/jR4dh3y/Pico32", "GitHub"))
-  - TL;DR — Electron app summarizing WhatsApp Group chats via OpenRouter models #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/tldr-desktop", "GitHub"))
-  - Hotel Booking — Svelte/Express/MySQL hotel booking platform with auth and admin flow #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/hotel-booking", "GitHub"))
-  - Tenant Manager — React Native app for tenant management and electricity tracking #h(1fr) #proj-links(lnk("https://github.com/jR4dh3y/tennet-manager", "GitHub"))
-]
 
+// #resume-entry(
+//   title: "Additional Projects",
+//   location: "",
+//   date: "",
+// )
+
+// #resume-item[
+//   - Victus Control - Vala/GTK4 app to monitor, control fan speed, and power profiles for HP laptops
+//   - rsclip - Rust/Wayland clipboard manager with OCR and secrets management
+//   - Dots-Niri - one-command NiriWM rice for Arch-based installs
+//   - HowTo - tutorials for practical hardware/software walkthroughs built with Astro
+//   - Pico32 - C++/PlatformIO serial TUI for ESP32 Wi-Fi/BT pentesting
+//   - TL;DR - Electron app summarizing WhatsApp Group chats via OpenRouter models
+//   - Hotel Booking - Svelte/Express/MySQL hotel booking platform with auth and admin flow
+//   - Tenant Manager - React Native app for tenant management and electricity tracking
+// ]
+
+
+#pagebreak()
 
 = Skills
 
@@ -265,19 +238,19 @@
 #resume-entry(
   title: [#strong[Cloud & DevOps Lead]],
   location: "MIET, Jammu",
-  date: "Aug 2025 — Present",
+  date: "Aug 2025 - Present",
   description: "Google Developer Groups on Campus · AWS Cloud Club",
 )
 
 #resume-item[
   - Lead cloud and DevOps initiatives across Google Developer Groups on Campus and AWS Cloud Club through workshops, technical sessions, and collaborative projects on GCP, AWS, containerization, and infrastructure automation.
-  - Ran Google Cloud sessions for 100+ students and built a tutorial platform with 20+ lab walkthroughs, notes, and videos for Google Cloud Study Jam · #proj-links(lnk("https://gcp-tutorial.vercel.app/", "Live"), lnk("https://github.com/gdgoc-miet/gcp-tutorial-ui", "GitHub"))
+  - Ran Google Cloud sessions for 100+ students and built a tutorial platform with 20+ lab walkthroughs, notes, and videos for Google Cloud Study Jam
 ]
 
 = Achievements
 
 #resume-entry(
-  title: entry-title("IDE Bootcamp Edition 3", "Team Leader, 2nd Place", separator: "—"),
+  title: entry-title("IDE Bootcamp Edition 3", "Team Leader, 2nd Place", separator: "-"),
   location: "GNDEC, Ludhiana",
   date: "Apr 2026",
   description: "AICTE / MoE Innovation Cell · Wadhwani Foundation",
@@ -288,7 +261,7 @@
 ]
 
 #resume-entry(
-  title: entry-title("IDE Bootcamp Edition 2", "Team Leader", separator: "—"),
+  title: entry-title("IDE Bootcamp Edition 2", "Team Leader", separator: "-"),
   location: "IIT Jammu",
   date: "Feb 2025",
   description: "AICTE / MoE Innovation Cell · Wadhwani Foundation",
@@ -312,40 +285,34 @@
 = Certifications & Programs
 
 #resume-certification(
-  [Google Cybersecurity — Coursera],
-  lnk("https://drive.google.com/file/d/1SIxLO0PLcOsLC0SQkZri6dQD1kyKAooL/view?usp=sharing", "Certificate"),
+  [Google Cybersecurity - Coursera],
+  "",
 )
 #resume-certification(
-  [Cisco Cybersecurity Operations Fundamentals — Coursera],
-  lnk("https://drive.google.com/file/d/1GzR6t8wylBR3NqwdkuLobi6jAqEr0CcG/view?usp=sharing", "Certificate"),
+  [Cisco Cybersecurity Operations Fundamentals - Coursera],
+  "",
 )
 #resume-certification(
-  [Palo Alto Networks Cybersecurity — Coursera],
-  lnk("https://drive.google.com/file/d/1ArLaJyIQP2R-S94KwshJRTgIQdjc3UCm/view?usp=sharing", "Certificate"),
+  [Palo Alto Networks Cybersecurity - Coursera],
+  "",
 )
 #resume-certification(
-  [EC-Council Cybersecurity Attack and Defense Fundamentals — Coursera],
-  lnk("https://drive.google.com/file/d/1JpG9iwP2Sq4JCl01PF6VVTFD9B1ZZT4M/view?usp=sharing", "Certificate"),
+  [EC-Council Cybersecurity Attack and Defense Fundamentals - Coursera],
+  "",
 )
 #resume-certification(
-  [NPTEL Ethical Hacking — IIT Kharagpur],
-  lnk(
-    "https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs94/Course/NPTEL24CS94S35440004903810809.pdf",
-    "Certificate",
-  ),
+  [NPTEL Ethical Hacking - IIT Kharagpur],
+  "",
 )
 #resume-certification(
-  [NPTEL Deep Learning — IIT Ropar],
-  lnk(
-    "https://archive.nptel.ac.in/content/noc/NOC25/SEM2/Ecertificates/106/noc25-cs106/Course/NPTEL25CS106S45890051510210361.pdf",
-    "Certificate",
-  ),
+  [NPTEL Deep Learning - IIT Ropar],
+  "",
 )
 #resume-certification(
   [IBM SkillsBuild: AI Agent Architect],
-  lnk("https://drive.google.com/file/d/19Pmeutg62bbuCQ1M5NDx4nc2zKQgZ2ig/view", "Certificate"),
+  "",
 )
 #resume-certification(
   [IDE Bootcamp (AICTE / MoE)],
-  lnk("https://drive.google.com/file/d/1zPWEANVHF5TArUIdF3m7mu7goTPxbUPX/view?usp=sharing", "Certificate"),
+  "",
 )
